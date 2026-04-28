@@ -5,12 +5,10 @@
 
 
 // src/controllers/userController.js
-// -----------------------------------------------
 // Handles all user profile operations:
 // view profile, update info, upload avatar,
 // save/unsave trains, follow/unfollow pilots,
 // and the "My Contributions" page data.
-// -----------------------------------------------
 
 const User   = require('../models/User');
 const Post   = require('../models/Post');
@@ -18,10 +16,8 @@ const { Rating, HygieneReport } = require('../models/Rating');
 const { cloudinary, uploadAvatar } = require('../config/cloudinary');
 const { AppError } = require('../middlewares/errorHandler');
 
-// -----------------------------------------------
 //  GET /api/v1/users/:id
 //  View any user's public profile
-// -----------------------------------------------
 exports.getUserProfile = async (req, res, next) => {
   try {
     const user = await User.findById(req.params.id)
@@ -51,10 +47,8 @@ exports.getUserProfile = async (req, res, next) => {
   } catch (error) { next(error); }
 };
 
-// -----------------------------------------------
 //  PATCH /api/v1/users/updateMe
 //  Update own profile (name, phone, theme, notifications)
-// -----------------------------------------------
 exports.updateMe = async (req, res, next) => {
   try {
     const allowedFields = ['name', 'phone', 'theme', 'notifications'];
@@ -79,11 +73,9 @@ exports.updateMe = async (req, res, next) => {
   } catch (error) { next(error); }
 };
 
-// -----------------------------------------------
 //  PATCH /api/v1/users/updateAvatar
 //  Upload a new profile photo
 //  (uses uploadAvatar multer middleware, set in route)
-// -----------------------------------------------
 exports.updateAvatar = async (req, res, next) => {
   try {
     if (!req.file) {
@@ -112,10 +104,8 @@ exports.updateAvatar = async (req, res, next) => {
   } catch (error) { next(error); }
 };
 
-// -----------------------------------------------
 //  POST /api/v1/users/savedTrains/:trainId
 //  Save or unsave a train (toggle)
-// -----------------------------------------------
 exports.toggleSavedTrain = async (req, res, next) => {
   try {
     const user    = await User.findById(req.user._id);
@@ -143,10 +133,8 @@ exports.toggleSavedTrain = async (req, res, next) => {
   } catch (error) { next(error); }
 };
 
-// -----------------------------------------------
 //  GET /api/v1/users/contributions
 //  "My Contributions" page — all the user's activity
-// -----------------------------------------------
 exports.getMyContributions = async (req, res, next) => {
   try {
     const userId = req.user._id;
