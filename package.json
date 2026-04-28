@@ -1,0 +1,27 @@
+{
+  "name": "ekkwomm-backend",
+  "version": "1.0.0",
+  "description": "Backend for EkkWomm project",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": [],
+  "author": "Manjeet",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.0.0",
+    "morgan": "^1.10.0",
+    "socket.io": "^4.7.5",
+    "winston": "^3.13.0",
+    "mongoose": "^8.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
