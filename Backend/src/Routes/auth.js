@@ -1,5 +1,4 @@
 // src/routes/auth.js
-// -----------------------------------------------
 // Defines all authentication-related URL endpoints.
 // A "route" connects a URL + HTTP method to a
 // controller function that handles the logic.
