@@ -67,7 +67,7 @@ io.on('connection', (socket)=> {
 
 //CORS - must be first so browser dont block request
 app.use(cors({
-    orogin: process.env.CLIENT_URL,
+    origin: process.env.CLIENT_URL,
     credentials:true //Allow cookies + Auth headers cross-origin
 }));
 

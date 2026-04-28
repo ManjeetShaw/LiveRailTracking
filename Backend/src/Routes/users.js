@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { protect } = require('../middlewares/auth');
-const { uploadAvatar } = require('../config/clloudinary');
+const { uploadAvatar } = require('../config/cloudinary');
 const{
     getUserProfile,
     updateMe,
