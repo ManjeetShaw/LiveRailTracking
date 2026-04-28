@@ -1,4 +1,3 @@
-// ================================================
 //  src/models/Train.js
 //  TWO models in one file — tightly related:
 //
@@ -15,11 +14,10 @@
 //  THIS IS THE CORE INVENTION OF EKKWOMM
 //  Without this split, you can't show multiple
 //  running copies of the same train simultaneously
-// ================================================
 
 const mongoose = require('mongoose');
 
-// ── Sub-schema: one station stop ───────────────
+// Sub-schema: one station stop 
 const stationStopSchema = new mongoose.Schema({
   stationCode: { type: String, required: true, uppercase: true },
   // e.g. "HWH", "MGS", "LKO", "YNRK"
@@ -43,7 +41,7 @@ const stationStopSchema = new mongoose.Schema({
   // Used to calculate % progress on the timeline bar
 });
 
-// ── Main Train schema ──────────────────────────
+// Main Train schema
 const trainSchema = new mongoose.Schema(
   {
     trainNumber: { type: String, required: true, unique: true, trim: true },
@@ -70,7 +68,7 @@ const trainSchema = new mongoose.Schema(
     stops: [stationStopSchema],
     // Full station list in order, using sub-schema above
 
-    // ── Analytics (auto-updated by cron worker) ─
+    // Analytics (auto-updated by cron worker) 
     analytics: {
       totalCompletedRuns: { type: Number, default: 0 },
       onTimeRuns:         { type: Number, default: 0 },
@@ -88,7 +86,7 @@ const trainSchema = new mongoose.Schema(
 // Text index → powers search bar (search by name or number)
 trainSchema.index({ trainName: 'text', trainNumber: 'text' });
 
-// ── TrainInstance schema ────────────────────────
+// TrainInstance schema
 const trainInstanceSchema = new mongoose.Schema(
   {
     train: {
@@ -120,7 +118,7 @@ const trainInstanceSchema = new mongoose.Schema(
       // cancelled = cancelled for this date
     },
 
-    // ── Live Position ──────────────────────────
+    //  Live Position 
     currentPosition: {
       lastStation: {
         code: { type: String },
