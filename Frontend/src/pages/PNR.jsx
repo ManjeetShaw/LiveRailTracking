@@ -31,7 +31,6 @@ export default function PNR() {
         <span style={styles.navLogo}>🚂 EkkWomm</span>
         <button style={styles.backBtn} onClick={() => navigate('/')}>← Back</button>
       </div>
-
       <div style={styles.hero}>
         <h1 style={styles.title}>PNR Status</h1>
         <p style={styles.sub}>Check your ticket booking status</p>
@@ -41,11 +40,9 @@ export default function PNR() {
           <button style={styles.btn} type="submit">Check Status</button>
         </form>
       </div>
-
       <div style={styles.content}>
         {loading && <p style={styles.msg}>Checking PNR...</p>}
         {error   && <p style={styles.errMsg}>{error}</p>}
-
         {result && (
           <div style={styles.card}>
             <div style={styles.cardHeader}>

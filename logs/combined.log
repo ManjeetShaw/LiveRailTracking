@@ -54,3 +54,9 @@
 {"level":"info","message":"🏥 Health check → http://localhost:5000/health","timestamp":"2026-05-01 00:50:36"}
 {"level":"info","message":"Delay stats cron scheduled (every 30 min)","timestamp":"2026-05-01 00:50:36"}
 {"level":"info","message":"Live tracking started (every 60 seconds)","timestamp":"2026-05-01 00:50:36"}
+{"level":"info","message":"🚂 EkkWomm server running on port 5000 in development mode","timestamp":"2026-05-01 00:55:33"}
+{"level":"info","message":"🏥 Health check → http://localhost:5000/health","timestamp":"2026-05-01 00:55:33"}
+{"level":"info","message":"Delay stats cron scheduled (every 30 min)","timestamp":"2026-05-01 00:55:33"}
+{"level":"info","message":"Live tracking started (every 60 seconds)","timestamp":"2026-05-01 00:55:33"}
+{"level":"info","message":"Running delay stats cron...","timestamp":"2026-05-01 01:00:00"}
+{"level":"info","message":"Running delay stats cron...","timestamp":"2026-05-01 01:30:00"}
