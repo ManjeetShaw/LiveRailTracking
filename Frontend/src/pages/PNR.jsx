@@ -97,4 +97,25 @@ export default function PNR() {
 
 const styles = {
   container:  { minHeight: '100vh', background: '#f5f5f5' },
-  navbar:     { background: '#1a237e', padding: '12px 24px', display: 'flex', jus
+  navbar:     { background: '#1a237e', padding: '12px 24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' },
+  navLogo:    { color: '#fff', fontSize: 22, fontWeight: 'bold' },
+  backBtn:    { background: 'transparent', border: '1px solid #fff', color: '#fff', padding: '6px 14px', borderRadius: 6, cursor: 'pointer' },
+  hero:       { background: '#1a237e', padding: '48px 24px', textAlign: 'center' },
+  title:      { color: '#fff', fontSize: 32, margin: '0 0 8px' },
+  sub:        { color: '#90caf9', fontSize: 16, margin: '0 0 24px' },
+  searchBox:  { display: 'flex', maxWidth: 500, margin: '0 auto', gap: 8 },
+  input:      { flex: 1, padding: '14px 18px', borderRadius: 8, border: 'none', fontSize: 16, letterSpacing: 2 },
+  btn:        { padding: '14px 24px', background: '#ff6f00', color: '#fff', border: 'none', borderRadius: 8, fontSize: 16, cursor: 'pointer', fontWeight: 'bold' },
+  content:    { maxWidth: 700, margin: '32px auto', padding: '0 16px' },
+  card:       { background: '#fff', borderRadius: 10, padding: 24, boxShadow: '0 2px 8px rgba(0,0,0,0.08)' },
+  cardHeader: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 20, paddingBottom: 16, borderBottom: '1px solid #eee' },
+  pnrNum:     { fontSize: 18, fontWeight: 'bold', color: '#1a237e' },
+  status:     { background: '#e8f5e9', color: '#43a047', padding: '4px 12px', borderRadius: 20, fontSize: 14, fontWeight: 'bold' },
+  row:        { display: 'flex', gap: 16, marginBottom: 16 },
+  col:        { flex: 1, display: 'flex', flexDirection: 'column', gap: 4 },
+  label:      { fontSize: 12, color: '#999', textTransform: 'uppercase' },
+  value:      { fontSize: 15, color: '#333', fontWeight: 'bold' },
+  passenger:  { display: 'flex', justifyContent: 'space-between', padding: '10px 0', borderTop: '1px solid #eee', fontSize: 14 },
+  msg:        { textAlign: 'center', color: '#666', fontSize: 16 },
+  errMsg:     { textAlign: 'center', color: 'red', fontSize: 16 },
+};
