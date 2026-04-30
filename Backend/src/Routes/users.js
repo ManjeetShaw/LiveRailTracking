@@ -25,5 +25,5 @@ router.post('/savedTrains/:trainId', toggleSavedTrain);
 //Public route - any user's profile (no login required)
 router.get('/:id', getUserProfile);
 
-module.export = router;
+module.exports = router;
  

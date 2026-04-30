@@ -1,4 +1,4 @@
-require('dotenv').config();  // ← THE MOST IMPORTANT FIX
+ require('dotenv').config({ path: require('path').resolve(__dirname, '../.env') });// ← THE MOST IMPORTANT FIX
 
 const express    = require('express');
 const http       = require('http');
@@ -14,7 +14,7 @@ const { startDelayStatsCron } = require('./workers/delayStats');
 const { startLiveTracking }   = require('./services/LiveTrackingService');
 
 const authRoutes    = require('./routes/auth');
-const trainRoutes   = require('./routes/trains');
+const trainRoutes   = require('./routes/train');
 const pilotRoutes   = require('./routes/pilots');
 const postRoutes    = require('./routes/posts');
 const pnrRoutes     = require('./routes/pnr');
@@ -59,14 +59,14 @@ app.get('/health', (req, res) => {
 });
 
 app.use('/api/v1/auth',    authRoutes);
-app.use('/api/v1/trains',  trainRoutes);
+app.use('/api/v1/train',  trainRoutes);
 app.use('/api/v1/pilots',  pilotRoutes);
 app.use('/api/v1/posts',   postRoutes);
 app.use('/api/v1/pnr',     pnrRoutes);
 app.use('/api/v1/hygiene', hygieneRoutes);
 app.use('/api/v1/users',   userRoutes);
 
-app.all('*', (req, res) => {
+app.all('*splat', (req, res) => {
   res.status(404).json({ success: false, message: `Route ${req.originalUrl} not found.` });
 });
 
