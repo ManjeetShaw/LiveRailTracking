@@ -1,0 +1,44 @@
+{"level":"info","message":"🚂 EkkWomm server running on port 5000 in development mode","timestamp":"2026-05-01 14:13:56"}
+{"level":"info","message":"🏥 Health check → http://localhost:5000/health","timestamp":"2026-05-01 14:13:56"}
+{"level":"info","message":"Delay stats cron scheduled (every 30 min)","timestamp":"2026-05-01 14:13:56"}
+{"level":"info","message":"Live tracking started (every 60 seconds)","timestamp":"2026-05-01 14:13:56"}
+{"level":"error","message":"Position update batch error: Operation `traininstances.find()` buffering timed out after 10000ms","timestamp":"2026-05-01 14:14:10"}
+{"level":"info","message":"🚂 EkkWomm server running on port 5000 in development mode","timestamp":"2026-05-01 14:37:08"}
+{"level":"info","message":"🏥 Health check → http://localhost:5000/health","timestamp":"2026-05-01 14:37:08"}
+{"level":"info","message":"Delay stats cron scheduled (every 30 min)","timestamp":"2026-05-01 14:37:08"}
+{"level":"info","message":"Live tracking started (every 60 seconds)","timestamp":"2026-05-01 14:37:08"}
+{"level":"info","message":"🚂 EkkWomm server running on port 5000 in development mode","timestamp":"2026-05-01 14:56:07"}
+{"level":"info","message":"🏥 Health check → http://localhost:5000/health","timestamp":"2026-05-01 14:56:07"}
+{"level":"info","message":"Delay stats cron scheduled (every 30 min)","timestamp":"2026-05-01 14:56:07"}
+{"level":"info","message":"Live tracking started (every 60 seconds)","timestamp":"2026-05-01 14:56:07"}
+{"level":"error","message":"Failed to start server: logger is not defined","timestamp":"2026-05-01 14:56:20"}
+{"level":"info","message":"🚂 EkkWomm server running on port 5000 in development mode","timestamp":"2026-05-01 14:59:02"}
+{"level":"info","message":"🏥 Health check → http://localhost:5000/health","timestamp":"2026-05-01 14:59:02"}
+{"level":"info","message":"Delay stats cron scheduled (every 30 min)","timestamp":"2026-05-01 14:59:02"}
+{"level":"info","message":"Live tracking started (every 60 seconds)","timestamp":"2026-05-01 14:59:02"}
+{"level":"info","message":"Running delay stats cron...","timestamp":"2026-05-01 15:00:00"}
+{"level":"info","message":"EkkWomm server running on port 5000 in development mode","timestamp":"2026-05-01 15:25:49"}
+{"level":"info","message":"Health check -> http://localhost:5000/health","timestamp":"2026-05-01 15:25:49"}
+{"level":"info","message":"Delay stats cron scheduled (every 30 min)","timestamp":"2026-05-01 15:25:50"}
+{"level":"info","message":"Live tracking started (every 60 seconds)","timestamp":"2026-05-01 15:25:50"}
+{"level":"info","message":"Running delay stats cron...","timestamp":"2026-05-01 15:30:00"}
+{"level":"info","message":"EkkWomm server running on port 5000 in development mode","timestamp":"2026-05-01 15:51:31"}
+{"level":"info","message":"Health check -> http://localhost:5000/health","timestamp":"2026-05-01 15:51:31"}
+{"level":"info","message":"Delay stats cron scheduled (every 30 min)","timestamp":"2026-05-01 15:51:31"}
+{"level":"info","message":"Live tracking started (every 60 seconds)","timestamp":"2026-05-01 15:51:31"}
+{"level":"info","message":"EkkWomm server running on port 5000 in development mode","timestamp":"2026-05-01 15:54:17"}
+{"level":"info","message":"Health check -> http://localhost:5000/health","timestamp":"2026-05-01 15:54:17"}
+{"level":"info","message":"Delay stats cron scheduled (every 30 min)","timestamp":"2026-05-01 15:54:17"}
+{"level":"info","message":"Live tracking started (every 60 seconds)","timestamp":"2026-05-01 15:54:17"}
+{"level":"info","message":"Running delay stats cron...","timestamp":"2026-05-01 16:00:00"}
+{"level":"info","message":"EkkWomm server running on port 5000 in development mode","timestamp":"2026-05-01 16:01:55"}
+{"level":"info","message":"Health check -> http://localhost:5000/health","timestamp":"2026-05-01 16:01:55"}
+{"level":"info","message":"Delay stats cron scheduled (every 30 min)","timestamp":"2026-05-01 16:01:55"}
+{"level":"info","message":"Live tracking started (every 60 seconds)","timestamp":"2026-05-01 16:01:55"}
+{"level":"error","message":"next is not a function","stack":"TypeError: next is not a function\n    at model.<anonymous> (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\src\\models\\User.js:97:3)\n    at async Kareem.execPre (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\kareem\\index.js:61:24)\n    at async model.$__save (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\model.js:397:5)\n    at async model.save (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\model.js:667:5)\n    at async model.create (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\model.js:2747:5)\n    at async exports.register (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\src\\controllers\\authController.js:32:18)","timestamp":"2026-05-01 16:02:54","url":"/api/v1/auth/register"}
+{"level":"info","message":"EkkWomm server running on port 5000 in development mode","timestamp":"2026-05-01 16:07:47"}
+{"level":"info","message":"Health check -> http://localhost:5000/health","timestamp":"2026-05-01 16:07:47"}
+{"level":"info","message":"Delay stats cron scheduled (every 30 min)","timestamp":"2026-05-01 16:07:47"}
+{"level":"info","message":"Live tracking started (every 60 seconds)","timestamp":"2026-05-01 16:07:47"}
+{"level":"info","message":"New user registered: abladabla@gmail.cpom","timestamp":"2026-05-01 16:08:31"}
+{"level":"info","message":"Running delay stats cron...","timestamp":"2026-05-01 16:30:00"}

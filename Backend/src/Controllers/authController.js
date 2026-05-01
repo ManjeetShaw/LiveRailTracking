@@ -12,8 +12,11 @@ const generateToken = (userId) =>
 // Helper — sends token + user data in response
 const sendTokenResponse = (user, statusCode, res) => {
   const token   = generateToken(user._id);
-  user.password = undefined; // never send password back, even hashed
-  res.status(statusCode).json({ success: true, token, data: { user } });
+  user.password = undefined;
+  res.status(statusCode).json({
+    success: true,
+    data: { token, user }  // ← move token inside data{}
+  });
 };
 
 // POST /api/v1/auth/register
