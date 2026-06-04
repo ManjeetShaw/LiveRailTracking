@@ -29,3 +29,67 @@
 {"level":"error","message":"Incorrect email or password.","stack":"Error: Incorrect email or password.\n    at exports.login (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\src\\controllers\\authController.js:51:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)","timestamp":"2026-05-02 22:38:08","url":"/api/v1/auth/login"}
 {"level":"error","message":"Incorrect email or password.","stack":"Error: Incorrect email or password.\n    at exports.login (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\src\\controllers\\authController.js:51:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)","timestamp":"2026-05-02 22:38:14","url":"/api/v1/auth/login"}
 {"level":"error","message":"Incorrect email or password.","stack":"Error: Incorrect email or password.\n    at exports.login (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\src\\controllers\\authController.js:51:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)","timestamp":"2026-05-02 22:38:15","url":"/api/v1/auth/login"}
+{"level":"error","message":"Incorrect email or password.","stack":"Error: Incorrect email or password.\n    at exports.login (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\src\\controllers\\authController.js:51:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)","timestamp":"2026-05-03 11:20:39","url":"/api/v1/auth/login"}
+{"level":"error","message":"Incorrect email or password.","stack":"Error: Incorrect email or password.\n    at exports.login (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\src\\controllers\\authController.js:51:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)","timestamp":"2026-05-03 11:20:44","url":"/api/v1/auth/login"}
+{"level":"error","message":"Incorrect email or password.","stack":"Error: Incorrect email or password.\n    at exports.login (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\src\\controllers\\authController.js:51:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)","timestamp":"2026-05-03 11:20:45","url":"/api/v1/auth/login"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 11:59:30"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 12:00:30"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 12:01:30"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 12:02:30"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 12:03:30"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 12:04:30"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 12:05:30"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 12:06:30"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 12:07:30"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 12:12:56"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 12:13:30"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 12:14:30"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 12:15:30"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 12:16:30"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 12:17:30"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 12:18:30"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 12:19:30"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 12:20:30"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 12:21:30"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 12:22:30"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 12:23:30"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 12:24:30"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 12:25:30"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 12:26:30"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 12:27:30"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 12:30:31"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 13:19:30"}
+{"level":"error","message":"Position update failed for 12431: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 13:20:01"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 13:20:30"}
+{"level":"error","message":"Position update failed for 12625: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 13:21:01"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 13:21:30"}
+{"level":"error","message":"Position update failed for 12621: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 13:22:01"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 13:22:30"}
+{"level":"error","message":"Position update failed for 12723: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 13:23:01"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 13:23:30"}
+{"level":"error","message":"Position update failed for 12805: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 13:24:01"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 13:24:30"}
+{"level":"error","message":"Position update failed for 12909: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 13:25:01"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 13:25:30"}
+{"level":"error","message":"Position update failed for 11057: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 13:26:01"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 13:26:30"}
+{"level":"error","message":"Position update failed for 12393: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 13:27:01"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 13:27:30"}
+{"level":"error","message":"Position update failed for 12953: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 13:28:01"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 13:28:30"}
+{"level":"error","message":"Position update failed for 12560: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 13:29:01"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 14:14:11"}
+{"level":"error","message":"Position update failed for 12004: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 14:14:41"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 14:15:30"}
+{"level":"error","message":"Position update failed for 13009: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 14:15:41"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 14:16:30"}
+{"level":"error","message":"Position update failed for 12875: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 14:16:41"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 14:46:49"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 14:47:30"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 14:48:30"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 14:49:30"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 15:03:30"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 15:04:30"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 15:05:30"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 15:06:30"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-05-03 15:07:30"}

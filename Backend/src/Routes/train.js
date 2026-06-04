@@ -10,10 +10,14 @@ const {
   getAllRunningTrains
 } = require('../controllers/trainController');
 
-router.get('/running/all',            getAllRunningTrains);  // GET /api/v1/train/running/all
-router.get('/',                       searchTrains);         // GET /api/v1/train?q=doon
-router.get('/:trainNumber',           getTrainDetail);       // GET /api/v1/train/13009
-router.get('/:trainNumber/instances', getRunningInstances);  // GET /api/v1/train/13009/instances
-router.get('/:trainNumber/analytics', getTrainAnalytics);    // GET /api/v1/train/13009/analytics
+router.get('/running/all', getAllRunningTrains);
+router.get('/', searchTrains);
+
+//  specific first
+router.get('/:trainNumber/instances', getRunningInstances);
+router.get('/:trainNumber/analytics', getTrainAnalytics);
+
+//  generic last
+router.get('/:trainNumber', getTrainDetail);
 
 module.exports = router;
