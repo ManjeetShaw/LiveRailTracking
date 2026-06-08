@@ -4,6 +4,9 @@ import Login from './pages/Login';
 import Home from './pages/Home';
 import TrainDetail from './pages/TrainDetail';
 import PNR from './pages/PNR';
+import Community from './pages/Community';
+import Profile from './pages/Profile';
+import Pilot from './pages/Pilot';
 
 const PrivateRoute = ({ children }) => {
   const { user, loading } = useAuth();
@@ -20,6 +23,9 @@ export default function App() {
           <Route path="/" element={<PrivateRoute><Home /></PrivateRoute>} />
           <Route path="/train/:trainNumber" element={<PrivateRoute><TrainDetail /></PrivateRoute>} />
           <Route path="/pnr" element={<PrivateRoute><PNR /></PrivateRoute>} />
+          <Route path="/community" element={<PrivateRoute><Community /></PrivateRoute>} />
+          <Route path="/profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
+          <Route path="/pilot/:id" element={<PrivateRoute><Pilot /></PrivateRoute>} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </BrowserRouter>

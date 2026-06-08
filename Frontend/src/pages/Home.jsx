@@ -33,6 +33,8 @@ export default function Home() {
         <span style={styles.navLogo}>🚂 EkkWomm</span>
         <div style={styles.navRight}>
           <button style={styles.navBtn} onClick={() => navigate('/pnr')}>PNR Status</button>
+          <button style={styles.navBtn} onClick={() => navigate('/community')}>💬 Community</button>
+          <button style={styles.navBtn} onClick={() => navigate('/profile')}>👤 Profile</button>
           <span style={styles.navUser}>👤 {user?.name}</span>
           <button style={styles.logoutBtn} onClick={logout}>Logout</button>
         </div>
