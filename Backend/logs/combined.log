@@ -571,3 +571,449 @@
 {"level":"info","message":"Health check -> http://localhost:5000/health","timestamp":"2026-05-03 15:40:26"}
 {"level":"info","message":"Delay stats cron scheduled (every 30 min)","timestamp":"2026-05-03 15:40:26"}
 {"level":"info","message":"Live tracking started (every 60 seconds)","timestamp":"2026-05-03 15:40:26"}
+{"level":"info","message":"EkkWomm server running on port 5000 in development mode","timestamp":"2026-06-04 13:49:04"}
+{"level":"info","message":"Health check -> http://localhost:5000/health","timestamp":"2026-06-04 13:49:04"}
+{"level":"info","message":"Delay stats cron scheduled (every 30 min)","timestamp":"2026-06-04 13:49:04"}
+{"level":"info","message":"Live tracking started (every 60 seconds)","timestamp":"2026-06-04 13:49:04"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 13:50:11"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 13:51:10"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 13:52:12"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 13:53:11"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 13:54:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 13:55:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 13:56:13"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 13:57:11"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 13:58:10"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 14:03:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 14:04:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 14:05:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 14:06:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 14:07:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 14:08:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 14:09:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 14:10:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 14:11:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 14:12:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 14:13:08"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-06-04 14:34:30"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-06-04 14:35:30"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 14:36:11"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 14:37:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 14:38:11"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 14:39:11"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 14:40:11"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 14:41:10"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 14:42:10"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 14:43:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 14:44:11"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 14:45:11"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 14:46:11"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 14:47:10"}
+{"level":"info","message":"EkkWomm server running on port 5000 in development mode","timestamp":"2026-06-04 14:55:38"}
+{"level":"info","message":"Health check -> http://localhost:5000/health","timestamp":"2026-06-04 14:55:38"}
+{"level":"info","message":"Delay stats cron scheduled (every 30 min)","timestamp":"2026-06-04 14:55:39"}
+{"level":"info","message":"Live tracking started (every 60 seconds)","timestamp":"2026-06-04 14:55:39"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 14:56:11"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 14:57:10"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 14:58:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 14:59:09"}
+{"level":"info","message":"Running delay stats cron...","timestamp":"2026-06-04 15:00:00"}
+{"level":"warn","message":"API fetch failed for 12951: Request failed with status code 404","timestamp":"2026-06-04 15:00:01"}
+{"level":"warn","message":"Using mock data for 12951","timestamp":"2026-06-04 15:00:01"}
+{"level":"warn","message":"API fetch failed for 12621: Request failed with status code 429","timestamp":"2026-06-04 15:00:01"}
+{"level":"warn","message":"Using mock data for 12621","timestamp":"2026-06-04 15:00:01"}
+{"level":"warn","message":"API fetch failed for 12431: Request failed with status code 429","timestamp":"2026-06-04 15:00:01"}
+{"level":"warn","message":"Using mock data for 12431","timestamp":"2026-06-04 15:00:01"}
+{"level":"warn","message":"API fetch failed for 12393: Request failed with status code 429","timestamp":"2026-06-04 15:00:02"}
+{"level":"warn","message":"Using mock data for 12393","timestamp":"2026-06-04 15:00:02"}
+{"level":"warn","message":"API fetch failed for 12953: Request failed with status code 429","timestamp":"2026-06-04 15:00:02"}
+{"level":"warn","message":"Using mock data for 12953","timestamp":"2026-06-04 15:00:02"}
+{"level":"warn","message":"API fetch failed for 12302: Request failed with status code 429","timestamp":"2026-06-04 15:00:02"}
+{"level":"warn","message":"Using mock data for 12302","timestamp":"2026-06-04 15:00:02"}
+{"level":"warn","message":"API fetch failed for 12301: Request failed with status code 429","timestamp":"2026-06-04 15:00:02"}
+{"level":"warn","message":"Using mock data for 12301","timestamp":"2026-06-04 15:00:02"}
+{"level":"warn","message":"API fetch failed for 12805: Request failed with status code 429","timestamp":"2026-06-04 15:00:03"}
+{"level":"warn","message":"Using mock data for 12805","timestamp":"2026-06-04 15:00:03"}
+{"level":"warn","message":"API fetch failed for 12625: Request failed with status code 429","timestamp":"2026-06-04 15:00:03"}
+{"level":"warn","message":"Using mock data for 12625","timestamp":"2026-06-04 15:00:03"}
+{"level":"warn","message":"API fetch failed for 13009: Request failed with status code 404","timestamp":"2026-06-04 15:00:04"}
+{"level":"warn","message":"Using mock data for 13009","timestamp":"2026-06-04 15:00:04"}
+{"level":"warn","message":"API fetch failed for 12560: Request failed with status code 429","timestamp":"2026-06-04 15:00:05"}
+{"level":"warn","message":"Using mock data for 12560","timestamp":"2026-06-04 15:00:05"}
+{"level":"warn","message":"API fetch failed for 12001: Request failed with status code 429","timestamp":"2026-06-04 15:00:05"}
+{"level":"warn","message":"Using mock data for 12001","timestamp":"2026-06-04 15:00:05"}
+{"level":"warn","message":"API fetch failed for 22119: Request failed with status code 429","timestamp":"2026-06-04 15:00:05"}
+{"level":"warn","message":"Using mock data for 22119","timestamp":"2026-06-04 15:00:05"}
+{"level":"warn","message":"API fetch failed for 12875: Request failed with status code 429","timestamp":"2026-06-04 15:00:06"}
+{"level":"warn","message":"Using mock data for 12875","timestamp":"2026-06-04 15:00:06"}
+{"level":"warn","message":"API fetch failed for 12004: Request failed with status code 429","timestamp":"2026-06-04 15:00:06"}
+{"level":"warn","message":"Using mock data for 12004","timestamp":"2026-06-04 15:00:06"}
+{"level":"warn","message":"API fetch failed for 12029: Request failed with status code 429","timestamp":"2026-06-04 15:00:06"}
+{"level":"warn","message":"Using mock data for 12029","timestamp":"2026-06-04 15:00:06"}
+{"level":"warn","message":"API fetch failed for 12259: Request failed with status code 429","timestamp":"2026-06-04 15:00:07"}
+{"level":"warn","message":"Using mock data for 12259","timestamp":"2026-06-04 15:00:07"}
+{"level":"warn","message":"API fetch failed for 12909: Request failed with status code 404","timestamp":"2026-06-04 15:00:07"}
+{"level":"warn","message":"Using mock data for 12909","timestamp":"2026-06-04 15:00:07"}
+{"level":"warn","message":"API fetch failed for 12723: Request failed with status code 429","timestamp":"2026-06-04 15:00:08"}
+{"level":"warn","message":"Using mock data for 12723","timestamp":"2026-06-04 15:00:08"}
+{"level":"warn","message":"API fetch failed for 11057: Request failed with status code 429","timestamp":"2026-06-04 15:00:08"}
+{"level":"warn","message":"Using mock data for 11057","timestamp":"2026-06-04 15:00:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 15:00:08"}
+{"level":"info","message":"Delay stats cron completed successfully","timestamp":"2026-06-04 15:00:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 15:01:10"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 15:02:13"}
+{"level":"info","message":"New user registered: abcd07@gmail.com","timestamp":"2026-06-04 15:03:07"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 15:03:11"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 15:04:11"}
+{"level":"info","message":"EkkWomm server running on port 5000 in development mode","timestamp":"2026-06-04 15:04:41"}
+{"level":"info","message":"Health check -> http://localhost:5000/health","timestamp":"2026-06-04 15:04:41"}
+{"level":"info","message":"Delay stats cron scheduled (every 30 min)","timestamp":"2026-06-04 15:04:41"}
+{"level":"info","message":"Live tracking started (every 60 seconds)","timestamp":"2026-06-04 15:04:41"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 15:05:10"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 15:06:10"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 15:07:11"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 15:08:13"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 15:09:12"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 15:10:12"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 15:11:12"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 15:12:11"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 15:13:12"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 15:14:11"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 15:15:12"}
+{"level":"info","message":"WebSocket connected: VV7LUqPr2gkSd0CTAAAB","timestamp":"2026-06-04 15:16:04"}
+{"level":"info","message":"WebSocket connected: jfFpG2TlMJ-8PqkXAAAD","timestamp":"2026-06-04 15:16:04"}
+{"level":"info","message":"WebSocket disconnected: VV7LUqPr2gkSd0CTAAAB","timestamp":"2026-06-04 15:16:04"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 15:16:11"}
+{"level":"info","message":"WebSocket disconnected: jfFpG2TlMJ-8PqkXAAAD","timestamp":"2026-06-04 15:16:22"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 15:17:11"}
+{"level":"info","message":"WebSocket connected: iFRAkcildvHbKTxfAAAF","timestamp":"2026-06-04 15:17:25"}
+{"level":"info","message":"WebSocket disconnected: iFRAkcildvHbKTxfAAAF","timestamp":"2026-06-04 15:17:25"}
+{"level":"info","message":"WebSocket connected: 2mv7bN8icggXSmiEAAAH","timestamp":"2026-06-04 15:17:25"}
+{"level":"info","message":"WebSocket disconnected: 2mv7bN8icggXSmiEAAAH","timestamp":"2026-06-04 15:17:37"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 15:18:11"}
+{"level":"info","message":"User logged in: abcd07@gmail.com","timestamp":"2026-06-04 15:19:11"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 15:19:11"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 15:20:11"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 15:21:12"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 15:22:12"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 15:23:12"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 15:24:12"}
+{"level":"info","message":"EkkWomm server running on port 5000 in development mode","timestamp":"2026-06-04 20:49:10"}
+{"level":"info","message":"Health check -> http://localhost:5000/health","timestamp":"2026-06-04 20:49:10"}
+{"level":"info","message":"Delay stats cron scheduled (every 30 min)","timestamp":"2026-06-04 20:49:10"}
+{"level":"info","message":"Live tracking started (every 60 seconds)","timestamp":"2026-06-04 20:49:10"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 20:50:12"}
+{"level":"error","message":"Cannot populate path `followedPilots` because it is not in your schema. Set the `strictPopulate` option to false to override.","stack":"StrictPopulateError: Cannot populate path `followedPilots` because it is not in your schema. Set the `strictPopulate` option to false to override.\n    at getModelsMapForPopulate (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\helpers\\populate\\getModelsMapForPopulate.js:50:12)\n    at _populatePath (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\model.js:4492:21)\n    at model.populate (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\model.js:4459:21)\n    at C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\query.js:2654:11\n    at _init (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\query.js:3330:5)\n    at Document.init (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\document.js:660:5)\n    at Document.$init (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\document.js:673:42)\n    at Object.createModelAndInit (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\queryHelpers.js:123:12)\n    at completeOne (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\query.js:3308:11)\n    at Query._completeOne (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\query.js:2650:3)","timestamp":"2026-06-04 20:51:05","url":"/api/v1/auth/me"}
+{"level":"error","message":"Cannot populate path `followedPilots` because it is not in your schema. Set the `strictPopulate` option to false to override.","stack":"StrictPopulateError: Cannot populate path `followedPilots` because it is not in your schema. Set the `strictPopulate` option to false to override.\n    at getModelsMapForPopulate (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\helpers\\populate\\getModelsMapForPopulate.js:50:12)\n    at _populatePath (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\model.js:4492:21)\n    at model.populate (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\model.js:4459:21)\n    at C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\query.js:2654:11\n    at _init (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\query.js:3330:5)\n    at Document.init (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\document.js:660:5)\n    at Document.$init (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\document.js:673:42)\n    at Object.createModelAndInit (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\queryHelpers.js:123:12)\n    at completeOne (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\query.js:3308:11)\n    at Query._completeOne (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\query.js:2650:3)","timestamp":"2026-06-04 20:51:06","url":"/api/v1/auth/me"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 20:51:08"}
+{"level":"info","message":"User logged in: abcd07@gmail.com","timestamp":"2026-06-04 20:51:36"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 20:52:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 20:53:46"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 20:54:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 20:55:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 20:56:07"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 20:57:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 20:58:38"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 20:59:09"}
+{"level":"info","message":"Running delay stats cron...","timestamp":"2026-06-04 21:00:00"}
+{"level":"warn","message":"API fetch failed for 12951: Request failed with status code 404","timestamp":"2026-06-04 21:00:01"}
+{"level":"warn","message":"Using mock data for 12951","timestamp":"2026-06-04 21:00:01"}
+{"level":"warn","message":"API fetch failed for 12621: Request failed with status code 429","timestamp":"2026-06-04 21:00:01"}
+{"level":"warn","message":"Using mock data for 12621","timestamp":"2026-06-04 21:00:01"}
+{"level":"warn","message":"API fetch failed for 12431: Request failed with status code 429","timestamp":"2026-06-04 21:00:01"}
+{"level":"warn","message":"Using mock data for 12431","timestamp":"2026-06-04 21:00:01"}
+{"level":"warn","message":"API fetch failed for 12393: Request failed with status code 429","timestamp":"2026-06-04 21:00:01"}
+{"level":"warn","message":"Using mock data for 12393","timestamp":"2026-06-04 21:00:01"}
+{"level":"warn","message":"API fetch failed for 12953: Request failed with status code 429","timestamp":"2026-06-04 21:00:02"}
+{"level":"warn","message":"Using mock data for 12953","timestamp":"2026-06-04 21:00:02"}
+{"level":"warn","message":"API fetch failed for 12302: Request failed with status code 429","timestamp":"2026-06-04 21:00:02"}
+{"level":"warn","message":"Using mock data for 12302","timestamp":"2026-06-04 21:00:02"}
+{"level":"warn","message":"API fetch failed for 12301: Request failed with status code 429","timestamp":"2026-06-04 21:00:02"}
+{"level":"warn","message":"Using mock data for 12301","timestamp":"2026-06-04 21:00:02"}
+{"level":"warn","message":"API fetch failed for 12805: Request failed with status code 429","timestamp":"2026-06-04 21:00:03"}
+{"level":"warn","message":"Using mock data for 12805","timestamp":"2026-06-04 21:00:03"}
+{"level":"warn","message":"API fetch failed for 12625: Request failed with status code 404","timestamp":"2026-06-04 21:00:04"}
+{"level":"warn","message":"Using mock data for 12625","timestamp":"2026-06-04 21:00:04"}
+{"level":"warn","message":"API fetch failed for 13009: Request failed with status code 429","timestamp":"2026-06-04 21:00:04"}
+{"level":"warn","message":"Using mock data for 13009","timestamp":"2026-06-04 21:00:04"}
+{"level":"warn","message":"API fetch failed for 12560: Request failed with status code 429","timestamp":"2026-06-04 21:00:04"}
+{"level":"warn","message":"Using mock data for 12560","timestamp":"2026-06-04 21:00:04"}
+{"level":"warn","message":"API fetch failed for 12001: Request failed with status code 429","timestamp":"2026-06-04 21:00:05"}
+{"level":"warn","message":"Using mock data for 12001","timestamp":"2026-06-04 21:00:05"}
+{"level":"warn","message":"API fetch failed for 22119: Request failed with status code 429","timestamp":"2026-06-04 21:00:05"}
+{"level":"warn","message":"Using mock data for 22119","timestamp":"2026-06-04 21:00:05"}
+{"level":"warn","message":"API fetch failed for 12875: Request failed with status code 429","timestamp":"2026-06-04 21:00:05"}
+{"level":"warn","message":"Using mock data for 12875","timestamp":"2026-06-04 21:00:05"}
+{"level":"warn","message":"API fetch failed for 12004: Request failed with status code 429","timestamp":"2026-06-04 21:00:05"}
+{"level":"warn","message":"Using mock data for 12004","timestamp":"2026-06-04 21:00:05"}
+{"level":"warn","message":"API fetch failed for 12029: Request failed with status code 429","timestamp":"2026-06-04 21:00:06"}
+{"level":"warn","message":"Using mock data for 12029","timestamp":"2026-06-04 21:00:06"}
+{"level":"warn","message":"API fetch failed for 12259: Request failed with status code 404","timestamp":"2026-06-04 21:00:07"}
+{"level":"warn","message":"Using mock data for 12259","timestamp":"2026-06-04 21:00:07"}
+{"level":"warn","message":"API fetch failed for 12909: Request failed with status code 429","timestamp":"2026-06-04 21:00:07"}
+{"level":"warn","message":"Using mock data for 12909","timestamp":"2026-06-04 21:00:07"}
+{"level":"warn","message":"API fetch failed for 12723: Request failed with status code 429","timestamp":"2026-06-04 21:00:07"}
+{"level":"warn","message":"Using mock data for 12723","timestamp":"2026-06-04 21:00:07"}
+{"level":"warn","message":"API fetch failed for 11057: Request failed with status code 429","timestamp":"2026-06-04 21:00:08"}
+{"level":"warn","message":"Using mock data for 11057","timestamp":"2026-06-04 21:00:08"}
+{"level":"info","message":"Delay stats cron completed successfully","timestamp":"2026-06-04 21:00:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 21:00:10"}
+{"level":"error","message":"Cannot populate path `followedPilots` because it is not in your schema. Set the `strictPopulate` option to false to override.","stack":"StrictPopulateError: Cannot populate path `followedPilots` because it is not in your schema. Set the `strictPopulate` option to false to override.\n    at getModelsMapForPopulate (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\helpers\\populate\\getModelsMapForPopulate.js:50:12)\n    at _populatePath (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\model.js:4492:21)\n    at model.populate (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\model.js:4459:21)\n    at C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\query.js:2654:11\n    at _init (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\query.js:3330:5)\n    at Document.init (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\document.js:660:5)\n    at Document.$init (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\document.js:673:42)\n    at Object.createModelAndInit (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\queryHelpers.js:123:12)\n    at completeOne (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\query.js:3308:11)\n    at Query._completeOne (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\query.js:2650:3)","timestamp":"2026-06-04 21:00:25","url":"/api/v1/auth/me"}
+{"level":"error","message":"Cannot populate path `followedPilots` because it is not in your schema. Set the `strictPopulate` option to false to override.","stack":"StrictPopulateError: Cannot populate path `followedPilots` because it is not in your schema. Set the `strictPopulate` option to false to override.\n    at getModelsMapForPopulate (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\helpers\\populate\\getModelsMapForPopulate.js:50:12)\n    at _populatePath (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\model.js:4492:21)\n    at model.populate (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\model.js:4459:21)\n    at C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\query.js:2654:11\n    at _init (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\query.js:3330:5)\n    at Document.init (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\document.js:660:5)\n    at Document.$init (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\document.js:673:42)\n    at Object.createModelAndInit (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\queryHelpers.js:123:12)\n    at completeOne (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\query.js:3308:11)\n    at Query._completeOne (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\query.js:2650:3)","timestamp":"2026-06-04 21:00:25","url":"/api/v1/auth/me"}
+{"level":"info","message":"User logged in: abcd07@gmail.com","timestamp":"2026-06-04 21:00:31"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 21:01:08"}
+{"level":"info","message":"WebSocket connected: fmwetTiOYR2MjeZfAAAB","timestamp":"2026-06-04 21:01:21"}
+{"level":"info","message":"WebSocket disconnected: fmwetTiOYR2MjeZfAAAB","timestamp":"2026-06-04 21:01:21"}
+{"level":"info","message":"WebSocket connected: x4_-AnbLzy4LLv2vAAAD","timestamp":"2026-06-04 21:01:21"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 21:02:08"}
+{"level":"info","message":"WebSocket disconnected: x4_-AnbLzy4LLv2vAAAD","timestamp":"2026-06-04 21:02:36"}
+{"level":"error","message":"Cannot populate path `followedPilots` because it is not in your schema. Set the `strictPopulate` option to false to override.","stack":"StrictPopulateError: Cannot populate path `followedPilots` because it is not in your schema. Set the `strictPopulate` option to false to override.\n    at getModelsMapForPopulate (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\helpers\\populate\\getModelsMapForPopulate.js:50:12)\n    at _populatePath (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\model.js:4492:21)\n    at model.populate (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\model.js:4459:21)\n    at C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\query.js:2654:11\n    at _init (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\query.js:3330:5)\n    at Document.init (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\document.js:660:5)\n    at Document.$init (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\document.js:673:42)\n    at Object.createModelAndInit (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\queryHelpers.js:123:12)\n    at completeOne (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\query.js:3308:11)\n    at Query._completeOne (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\query.js:2650:3)","timestamp":"2026-06-04 21:02:37","url":"/api/v1/auth/me"}
+{"level":"error","message":"Cannot populate path `followedPilots` because it is not in your schema. Set the `strictPopulate` option to false to override.","stack":"StrictPopulateError: Cannot populate path `followedPilots` because it is not in your schema. Set the `strictPopulate` option to false to override.\n    at getModelsMapForPopulate (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\helpers\\populate\\getModelsMapForPopulate.js:50:12)\n    at _populatePath (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\model.js:4492:21)\n    at model.populate (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\model.js:4459:21)\n    at C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\query.js:2654:11\n    at _init (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\query.js:3330:5)\n    at Document.init (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\document.js:660:5)\n    at Document.$init (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\document.js:673:42)\n    at Object.createModelAndInit (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\queryHelpers.js:123:12)\n    at completeOne (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\query.js:3308:11)\n    at Query._completeOne (C:\\Users\\Manjeet shaw\\Desktop\\EkkWomm\\Backend\\node_modules\\mongoose\\lib\\query.js:2650:3)","timestamp":"2026-06-04 21:02:37","url":"/api/v1/auth/me"}
+{"level":"info","message":"User logged in: abcd07@gmail.com","timestamp":"2026-06-04 21:02:47"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 21:03:15"}
+{"level":"info","message":"WebSocket connected: aV_UJDroUOHaFqxlAAAF","timestamp":"2026-06-04 21:03:15"}
+{"level":"info","message":"WebSocket connected: bFD_B1aHy6RhVqFFAAAH","timestamp":"2026-06-04 21:03:16"}
+{"level":"info","message":"WebSocket disconnected: aV_UJDroUOHaFqxlAAAF","timestamp":"2026-06-04 21:03:16"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 21:04:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 21:05:36"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 21:06:43"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 21:07:13"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 21:08:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 21:09:34"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 21:10:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 21:11:19"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 21:12:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 21:13:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-04 21:14:12"}
+{"level":"info","message":"WebSocket disconnected: bFD_B1aHy6RhVqFFAAAH","timestamp":"2026-06-04 21:15:15"}
+{"level":"info","message":"EkkWomm server running on port 5000 in development mode","timestamp":"2026-06-06 01:39:42"}
+{"level":"info","message":"Health check -> http://localhost:5000/health","timestamp":"2026-06-06 01:39:42"}
+{"level":"info","message":"Delay stats cron scheduled (every 30 min)","timestamp":"2026-06-06 01:39:42"}
+{"level":"info","message":"Live tracking started (every 60 seconds)","timestamp":"2026-06-06 01:39:42"}
+{"level":"info","message":"EkkWomm server running on port 5000 in development mode","timestamp":"2026-06-07 22:02:20"}
+{"level":"info","message":"Health check -> http://localhost:5000/health","timestamp":"2026-06-07 22:02:20"}
+{"level":"info","message":"Delay stats cron scheduled (every 30 min)","timestamp":"2026-06-07 22:02:21"}
+{"level":"info","message":"Live tracking started (every 60 seconds)","timestamp":"2026-06-07 22:02:21"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:03:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:04:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:05:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:06:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:07:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:08:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:09:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:10:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:11:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:12:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:13:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:14:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:15:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:16:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:17:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:18:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:19:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:20:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:21:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:22:11"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:23:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:24:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:25:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:26:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:27:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:28:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:29:08"}
+{"level":"info","message":"Running delay stats cron...","timestamp":"2026-06-07 22:30:00"}
+{"level":"warn","message":"API fetch failed for 12301: Request failed with status code 404","timestamp":"2026-06-07 22:30:01"}
+{"level":"warn","message":"Using mock data for 12301","timestamp":"2026-06-07 22:30:01"}
+{"level":"warn","message":"API fetch failed for 12302: Request failed with status code 429","timestamp":"2026-06-07 22:30:01"}
+{"level":"warn","message":"Using mock data for 12302","timestamp":"2026-06-07 22:30:01"}
+{"level":"warn","message":"API fetch failed for 12951: Request failed with status code 429","timestamp":"2026-06-07 22:30:01"}
+{"level":"warn","message":"Using mock data for 12951","timestamp":"2026-06-07 22:30:01"}
+{"level":"warn","message":"API fetch failed for 12259: Request failed with status code 429","timestamp":"2026-06-07 22:30:02"}
+{"level":"warn","message":"Using mock data for 12259","timestamp":"2026-06-07 22:30:02"}
+{"level":"warn","message":"API fetch failed for 12001: Request failed with status code 429","timestamp":"2026-06-07 22:30:02"}
+{"level":"warn","message":"Using mock data for 12001","timestamp":"2026-06-07 22:30:02"}
+{"level":"warn","message":"API fetch failed for 22119: Request failed with status code 429","timestamp":"2026-06-07 22:30:02"}
+{"level":"warn","message":"Using mock data for 22119","timestamp":"2026-06-07 22:30:02"}
+{"level":"warn","message":"API fetch failed for 12431: Request failed with status code 429","timestamp":"2026-06-07 22:30:02"}
+{"level":"warn","message":"Using mock data for 12431","timestamp":"2026-06-07 22:30:02"}
+{"level":"warn","message":"API fetch failed for 12625: Request failed with status code 429","timestamp":"2026-06-07 22:30:03"}
+{"level":"warn","message":"Using mock data for 12625","timestamp":"2026-06-07 22:30:03"}
+{"level":"warn","message":"API fetch failed for 12621: Request failed with status code 429","timestamp":"2026-06-07 22:30:03"}
+{"level":"warn","message":"Using mock data for 12621","timestamp":"2026-06-07 22:30:03"}
+{"level":"warn","message":"API fetch failed for 12723: Request failed with status code 404","timestamp":"2026-06-07 22:30:04"}
+{"level":"warn","message":"Using mock data for 12723","timestamp":"2026-06-07 22:30:04"}
+{"level":"warn","message":"API fetch failed for 12805: Request failed with status code 429","timestamp":"2026-06-07 22:30:04"}
+{"level":"warn","message":"Using mock data for 12805","timestamp":"2026-06-07 22:30:04"}
+{"level":"warn","message":"API fetch failed for 12909: Request failed with status code 429","timestamp":"2026-06-07 22:30:05"}
+{"level":"warn","message":"Using mock data for 12909","timestamp":"2026-06-07 22:30:05"}
+{"level":"warn","message":"API fetch failed for 11057: Request failed with status code 429","timestamp":"2026-06-07 22:30:06"}
+{"level":"warn","message":"Using mock data for 11057","timestamp":"2026-06-07 22:30:06"}
+{"level":"warn","message":"API fetch failed for 12393: Request failed with status code 429","timestamp":"2026-06-07 22:30:06"}
+{"level":"warn","message":"Using mock data for 12393","timestamp":"2026-06-07 22:30:06"}
+{"level":"warn","message":"API fetch failed for 12953: Request failed with status code 429","timestamp":"2026-06-07 22:30:06"}
+{"level":"warn","message":"Using mock data for 12953","timestamp":"2026-06-07 22:30:06"}
+{"level":"warn","message":"API fetch failed for 12560: Request failed with status code 404","timestamp":"2026-06-07 22:30:07"}
+{"level":"warn","message":"Using mock data for 12560","timestamp":"2026-06-07 22:30:07"}
+{"level":"warn","message":"API fetch failed for 12004: Request failed with status code 429","timestamp":"2026-06-07 22:30:08"}
+{"level":"warn","message":"Using mock data for 12004","timestamp":"2026-06-07 22:30:08"}
+{"level":"warn","message":"API fetch failed for 13009: Request failed with status code 429","timestamp":"2026-06-07 22:30:08"}
+{"level":"warn","message":"Using mock data for 13009","timestamp":"2026-06-07 22:30:08"}
+{"level":"warn","message":"API fetch failed for 12875: Request failed with status code 429","timestamp":"2026-06-07 22:30:08"}
+{"level":"warn","message":"Using mock data for 12875","timestamp":"2026-06-07 22:30:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:30:08"}
+{"level":"warn","message":"API fetch failed for 12029: Request failed with status code 429","timestamp":"2026-06-07 22:30:08"}
+{"level":"warn","message":"Using mock data for 12029","timestamp":"2026-06-07 22:30:08"}
+{"level":"info","message":"Delay stats cron completed successfully","timestamp":"2026-06-07 22:30:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:31:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:32:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:33:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:34:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:35:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:36:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:37:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:38:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:39:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:40:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:41:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:42:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:43:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:44:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:45:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:46:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:47:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:48:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:49:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:50:10"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:51:12"}
+{"level":"error","message":"Position update batch error: getaddrinfo ENOTFOUND ac-prvytss-shard-00-00.xyklpii.mongodb.net","timestamp":"2026-06-07 22:52:49"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:53:10"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:54:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:55:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:56:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:57:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:58:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 22:59:10"}
+{"level":"info","message":"Running delay stats cron...","timestamp":"2026-06-07 23:00:00"}
+{"level":"warn","message":"API fetch failed for 12301: Request failed with status code 404","timestamp":"2026-06-07 23:00:01"}
+{"level":"warn","message":"Using mock data for 12301","timestamp":"2026-06-07 23:00:01"}
+{"level":"warn","message":"API fetch failed for 12302: Request failed with status code 429","timestamp":"2026-06-07 23:00:01"}
+{"level":"warn","message":"Using mock data for 12302","timestamp":"2026-06-07 23:00:01"}
+{"level":"warn","message":"API fetch failed for 12951: Request failed with status code 429","timestamp":"2026-06-07 23:00:01"}
+{"level":"warn","message":"Using mock data for 12951","timestamp":"2026-06-07 23:00:01"}
+{"level":"warn","message":"API fetch failed for 12259: Request failed with status code 429","timestamp":"2026-06-07 23:00:02"}
+{"level":"warn","message":"Using mock data for 12259","timestamp":"2026-06-07 23:00:02"}
+{"level":"warn","message":"API fetch failed for 12001: Request failed with status code 429","timestamp":"2026-06-07 23:00:02"}
+{"level":"warn","message":"Using mock data for 12001","timestamp":"2026-06-07 23:00:02"}
+{"level":"warn","message":"API fetch failed for 22119: Request failed with status code 429","timestamp":"2026-06-07 23:00:02"}
+{"level":"warn","message":"Using mock data for 22119","timestamp":"2026-06-07 23:00:02"}
+{"level":"warn","message":"API fetch failed for 12431: Request failed with status code 429","timestamp":"2026-06-07 23:00:03"}
+{"level":"warn","message":"Using mock data for 12431","timestamp":"2026-06-07 23:00:03"}
+{"level":"warn","message":"API fetch failed for 12625: Request failed with status code 429","timestamp":"2026-06-07 23:00:03"}
+{"level":"warn","message":"Using mock data for 12625","timestamp":"2026-06-07 23:00:03"}
+{"level":"warn","message":"API fetch failed for 12621: Request failed with status code 404","timestamp":"2026-06-07 23:00:04"}
+{"level":"warn","message":"Using mock data for 12621","timestamp":"2026-06-07 23:00:04"}
+{"level":"warn","message":"API fetch failed for 12723: Request failed with status code 429","timestamp":"2026-06-07 23:00:04"}
+{"level":"warn","message":"Using mock data for 12723","timestamp":"2026-06-07 23:00:04"}
+{"level":"warn","message":"API fetch failed for 12805: Request failed with status code 429","timestamp":"2026-06-07 23:00:05"}
+{"level":"warn","message":"Using mock data for 12805","timestamp":"2026-06-07 23:00:05"}
+{"level":"warn","message":"API fetch failed for 12909: Request failed with status code 429","timestamp":"2026-06-07 23:00:05"}
+{"level":"warn","message":"Using mock data for 12909","timestamp":"2026-06-07 23:00:05"}
+{"level":"warn","message":"API fetch failed for 11057: Request failed with status code 429","timestamp":"2026-06-07 23:00:05"}
+{"level":"warn","message":"Using mock data for 11057","timestamp":"2026-06-07 23:00:05"}
+{"level":"warn","message":"API fetch failed for 12393: Request failed with status code 429","timestamp":"2026-06-07 23:00:06"}
+{"level":"warn","message":"Using mock data for 12393","timestamp":"2026-06-07 23:00:06"}
+{"level":"warn","message":"API fetch failed for 12953: Request failed with status code 429","timestamp":"2026-06-07 23:00:06"}
+{"level":"warn","message":"Using mock data for 12953","timestamp":"2026-06-07 23:00:06"}
+{"level":"warn","message":"API fetch failed for 12560: Request failed with status code 429","timestamp":"2026-06-07 23:00:06"}
+{"level":"warn","message":"Using mock data for 12560","timestamp":"2026-06-07 23:00:06"}
+{"level":"warn","message":"API fetch failed for 12004: Request failed with status code 404","timestamp":"2026-06-07 23:00:07"}
+{"level":"warn","message":"Using mock data for 12004","timestamp":"2026-06-07 23:00:07"}
+{"level":"warn","message":"API fetch failed for 13009: Request failed with status code 429","timestamp":"2026-06-07 23:00:07"}
+{"level":"warn","message":"Using mock data for 13009","timestamp":"2026-06-07 23:00:07"}
+{"level":"warn","message":"API fetch failed for 12875: Request failed with status code 429","timestamp":"2026-06-07 23:00:08"}
+{"level":"warn","message":"Using mock data for 12875","timestamp":"2026-06-07 23:00:08"}
+{"level":"warn","message":"API fetch failed for 12029: Request failed with status code 429","timestamp":"2026-06-07 23:00:08"}
+{"level":"warn","message":"Using mock data for 12029","timestamp":"2026-06-07 23:00:08"}
+{"level":"info","message":"Delay stats cron completed successfully","timestamp":"2026-06-07 23:00:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 23:00:10"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 23:01:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 23:02:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 23:03:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 23:04:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 23:05:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 23:06:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 23:07:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 23:08:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 23:09:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 23:10:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 23:11:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 23:12:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 23:13:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 23:14:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 23:15:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 23:16:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 23:21:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 23:22:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 23:23:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 23:24:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 23:25:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 23:26:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 23:27:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 23:28:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 23:29:09"}
+{"level":"info","message":"Running delay stats cron...","timestamp":"2026-06-07 23:30:00"}
+{"level":"warn","message":"API fetch failed for 12301: Request failed with status code 404","timestamp":"2026-06-07 23:30:02"}
+{"level":"warn","message":"Using mock data for 12301","timestamp":"2026-06-07 23:30:02"}
+{"level":"warn","message":"API fetch failed for 12302: Request failed with status code 429","timestamp":"2026-06-07 23:30:02"}
+{"level":"warn","message":"Using mock data for 12302","timestamp":"2026-06-07 23:30:02"}
+{"level":"warn","message":"API fetch failed for 12951: Request failed with status code 429","timestamp":"2026-06-07 23:30:02"}
+{"level":"warn","message":"Using mock data for 12951","timestamp":"2026-06-07 23:30:02"}
+{"level":"warn","message":"API fetch failed for 12259: Request failed with status code 429","timestamp":"2026-06-07 23:30:03"}
+{"level":"warn","message":"Using mock data for 12259","timestamp":"2026-06-07 23:30:03"}
+{"level":"warn","message":"API fetch failed for 12001: Request failed with status code 429","timestamp":"2026-06-07 23:30:03"}
+{"level":"warn","message":"Using mock data for 12001","timestamp":"2026-06-07 23:30:03"}
+{"level":"warn","message":"API fetch failed for 22119: Request failed with status code 429","timestamp":"2026-06-07 23:30:03"}
+{"level":"warn","message":"Using mock data for 22119","timestamp":"2026-06-07 23:30:03"}
+{"level":"warn","message":"API fetch failed for 12431: Request failed with status code 429","timestamp":"2026-06-07 23:30:04"}
+{"level":"warn","message":"Using mock data for 12431","timestamp":"2026-06-07 23:30:04"}
+{"level":"warn","message":"API fetch failed for 12625: Request failed with status code 404","timestamp":"2026-06-07 23:30:04"}
+{"level":"warn","message":"Using mock data for 12625","timestamp":"2026-06-07 23:30:04"}
+{"level":"warn","message":"API fetch failed for 12621: Request failed with status code 429","timestamp":"2026-06-07 23:30:05"}
+{"level":"warn","message":"Using mock data for 12621","timestamp":"2026-06-07 23:30:05"}
+{"level":"warn","message":"API fetch failed for 12723: Request failed with status code 429","timestamp":"2026-06-07 23:30:05"}
+{"level":"warn","message":"Using mock data for 12723","timestamp":"2026-06-07 23:30:05"}
+{"level":"warn","message":"API fetch failed for 12805: Request failed with status code 429","timestamp":"2026-06-07 23:30:05"}
+{"level":"warn","message":"Using mock data for 12805","timestamp":"2026-06-07 23:30:05"}
+{"level":"warn","message":"API fetch failed for 12909: Request failed with status code 429","timestamp":"2026-06-07 23:30:06"}
+{"level":"warn","message":"Using mock data for 12909","timestamp":"2026-06-07 23:30:06"}
+{"level":"warn","message":"API fetch failed for 11057: Request failed with status code 429","timestamp":"2026-06-07 23:30:06"}
+{"level":"warn","message":"Using mock data for 11057","timestamp":"2026-06-07 23:30:06"}
+{"level":"warn","message":"API fetch failed for 12393: Request failed with status code 429","timestamp":"2026-06-07 23:30:06"}
+{"level":"warn","message":"Using mock data for 12393","timestamp":"2026-06-07 23:30:06"}
+{"level":"warn","message":"API fetch failed for 12953: Request failed with status code 429","timestamp":"2026-06-07 23:30:07"}
+{"level":"warn","message":"Using mock data for 12953","timestamp":"2026-06-07 23:30:07"}
+{"level":"warn","message":"API fetch failed for 12560: Request failed with status code 429","timestamp":"2026-06-07 23:30:07"}
+{"level":"warn","message":"Using mock data for 12560","timestamp":"2026-06-07 23:30:07"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 23:30:08"}
+{"level":"warn","message":"API fetch failed for 12004: Request failed with status code 404","timestamp":"2026-06-07 23:30:10"}
+{"level":"warn","message":"Using mock data for 12004","timestamp":"2026-06-07 23:30:10"}
+{"level":"warn","message":"API fetch failed for 13009: Request failed with status code 429","timestamp":"2026-06-07 23:30:10"}
+{"level":"warn","message":"Using mock data for 13009","timestamp":"2026-06-07 23:30:10"}
+{"level":"warn","message":"API fetch failed for 12875: timeout of 5000ms exceeded","timestamp":"2026-06-07 23:30:15"}
+{"level":"warn","message":"Using mock data for 12875","timestamp":"2026-06-07 23:30:15"}
+{"level":"warn","message":"API fetch failed for 12029: Request failed with status code 404","timestamp":"2026-06-07 23:30:16"}
+{"level":"warn","message":"Using mock data for 12029","timestamp":"2026-06-07 23:30:16"}
+{"level":"info","message":"Delay stats cron completed successfully","timestamp":"2026-06-07 23:30:17"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 23:31:11"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 23:32:09"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 23:33:07"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 23:34:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 23:35:07"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 23:36:08"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 23:37:07"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 23:38:07"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 23:39:07"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 23:40:07"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 23:41:07"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 23:42:07"}
+{"level":"info","message":"Updated positions for 20 running trains","timestamp":"2026-06-07 23:43:08"}
