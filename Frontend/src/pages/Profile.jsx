@@ -1,4 +1,4 @@
-  import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getMyContributions, updateMe } from '../services/api';
 import { useAuth } from '../context/AuthContext';
@@ -75,121 +75,131 @@ export default function Profile() {
     return `${Math.floor(days / 30)}mo ago`;
   };
 
+  const tabs = [
+    { id: 'overview', label: '📊 Overview' },
+    { id: 'posts',    label: '📝 My Posts' },
+    { id: 'badges',   label: '🏅 Badges' },
+    { id: 'settings', label: '⚙️ Settings' },
+  ];
+
   return (
-    <div style={s.page}>
-      <div style={s.navbar}>
-        <span style={s.logo}>🚂 EkkWomm</span>
-        <div style={s.navRight}>
-          <button style={s.navBtn} onClick={() => navigate('/')}>🏠 Home</button>
-          <button style={s.navBtn} onClick={() => navigate('/community')}>💬 Community</button>
-          <button style={s.logoutBtn} onClick={logout}>Logout</button>
+    <div className="pr-page">
+
+      {/* Navbar */}
+      <nav className="pr-nav">
+        <span className="pr-nav-logo" onClick={() => navigate('/')}>🚂 EkkWomm</span>
+        <div className="pr-nav-links">
+          <button className="pr-nav-btn" onClick={() => navigate('/')}>🏠 Home</button>
+          <button className="pr-nav-btn" onClick={() => navigate('/community')}>💬 Community</button>
+          <button className="pr-nav-logout" onClick={logout}>Logout</button>
+        </div>
+      </nav>
+
+      {/* Hero */}
+      <div className="pr-hero">
+        <div className="pr-hero-inner">
+          <div className="pr-avatar">
+            {user?.avatar?.url
+              ? <img src={user.avatar.url} alt="avatar" className="pr-avatar-img" />
+              : <span className="pr-avatar-letter">{user?.name?.[0]?.toUpperCase()}</span>
+            }
+          </div>
+          <h1 className="pr-user-name">{user?.name}</h1>
+          <span
+            className="pr-rank-badge"
+            style={{ background: rankStyle.bg, color: rankStyle.color }}
+          >
+            {user?.rank}
+          </span>
+          <div className="pr-xp-row">
+            <span className="pr-xp-text">⚡ {user?.xp || 0} XP</span>
+            {nextRank && (
+              <span className="pr-next-rank">→ {nextRank.name} at {nextMin} XP</span>
+            )}
+          </div>
+          <div className="pr-progress-track">
+            <div className="pr-progress-fill" style={{ width: `${xpProgress}%` }} />
+          </div>
+          <div className="pr-progress-label">{Math.round(xpProgress)}% to next rank</div>
         </div>
       </div>
 
-      <div style={s.hero}>
-        <div style={s.avatarCircle}>
-          {user?.avatar?.url
-            ? <img src={user.avatar.url} alt="avatar" style={s.avatarImg} />
-            : <span style={s.avatarLetter}>{user?.name?.[0]?.toUpperCase()}</span>
-          }
-        </div>
-        <h1 style={s.userName}>{user?.name}</h1>
-        <span style={{ ...s.rankBadge, background: rankStyle.bg, color: rankStyle.color }}>
-          {user?.rank}
-        </span>
-        <div style={s.xpRow}>
-          <span style={s.xpText}>⚡ {user?.xp || 0} XP</span>
-          {nextRank && <span style={s.nextRank}>→ {nextRank.name} at {nextMin} XP</span>}
-        </div>
-        <div style={s.progressTrack}>
-          <div style={{ ...s.progressFill, width: `${xpProgress}%` }} />
-        </div>
+      {/* Stats row */}
+      <div className="pr-stats-row">
+        {[
+          { val: contributions?.posts?.length || 0,          label: 'Posts' },
+          { val: contributions?.ratings?.length || 0,        label: 'Ratings' },
+          { val: contributions?.hygieneReports?.length || 0, label: 'Reports' },
+          { val: user?.badges?.length || 0,                  label: 'Badges' },
+        ].map((s, i) => (
+          <div key={i} className="pr-stat-block">
+            <span className="pr-stat-val">{s.val}</span>
+            <span className="pr-stat-label">{s.label}</span>
+          </div>
+        ))}
       </div>
 
-      <div style={s.statsRow}>
-        <div style={s.stat}>
-          <span style={s.statVal}>{contributions?.posts?.length || 0}</span>
-          <span style={s.statLabel}>Posts</span>
-        </div>
-        <div style={s.statDivider} />
-        <div style={s.stat}>
-          <span style={s.statVal}>{contributions?.ratings?.length || 0}</span>
-          <span style={s.statLabel}>Ratings</span>
-        </div>
-        <div style={s.statDivider} />
-        <div style={s.stat}>
-          <span style={s.statVal}>{contributions?.hygieneReports?.length || 0}</span>
-          <span style={s.statLabel}>Reports</span>
-        </div>
-        <div style={s.statDivider} />
-        <div style={s.stat}>
-          <span style={s.statVal}>{user?.badges?.length || 0}</span>
-          <span style={s.statLabel}>Badges</span>
-        </div>
-      </div>
+      <div className="pr-body">
 
-      <div style={s.body}>
-        <div style={s.tabs}>
-          {['overview','posts','badges','settings'].map(tab => (
-            <button key={tab} style={{
-              ...s.tab,
-              borderBottom: activeTab === tab ? '2px solid #1a237e' : '2px solid transparent',
-              color:        activeTab === tab ? '#1a237e' : '#999',
-              fontWeight:   activeTab === tab ? 'bold' : 'normal',
-            }} onClick={() => setActiveTab(tab)}>
-              {tab === 'overview' && '📊 Overview'}
-              {tab === 'posts'    && '📝 My Posts'}
-              {tab === 'badges'   && '🏅 Badges'}
-              {tab === 'settings' && '⚙️ Settings'}
+        {/* Tabs */}
+        <div className="pr-tabs">
+          {tabs.map(tab => (
+            <button
+              key={tab.id}
+              className={`pr-tab ${activeTab === tab.id ? 'pr-tab-active' : ''}`}
+              onClick={() => setActiveTab(tab.id)}
+            >
+              {tab.label}
             </button>
           ))}
         </div>
 
+        {/* Overview */}
         {activeTab === 'overview' && (
           <div>
             {contributions?.xpBreakdown && (
-              <div style={s.card}>
-                <div style={s.cardTitle}>⚡ XP Breakdown</div>
-                <div style={s.xpGrid}>
-                  <div style={s.xpItem}>
-                    <span style={s.xpVal}>{contributions.xpBreakdown.fromPosts}</span>
-                    <span style={s.xpLabel}>From Posts</span>
-                  </div>
-                  <div style={s.xpItem}>
-                    <span style={s.xpVal}>{contributions.xpBreakdown.fromRatings}</span>
-                    <span style={s.xpLabel}>From Ratings</span>
-                  </div>
-                  <div style={s.xpItem}>
-                    <span style={s.xpVal}>{contributions.xpBreakdown.fromHygiene}</span>
-                    <span style={s.xpLabel}>From Reports</span>
-                  </div>
-                  <div style={s.xpItem}>
-                    <span style={{ ...s.xpVal, color: '#ff6f00' }}>{contributions.xpBreakdown.total}</span>
-                    <span style={s.xpLabel}>Total XP</span>
-                  </div>
+              <div className="pr-card">
+                <div className="pr-card-title">⚡ XP Breakdown</div>
+                <div className="pr-xp-grid">
+                  {[
+                    { val: contributions.xpBreakdown.fromPosts,   label: 'From Posts',   color: '#1565c0' },
+                    { val: contributions.xpBreakdown.fromRatings, label: 'From Ratings', color: '#2e7d32' },
+                    { val: contributions.xpBreakdown.fromHygiene, label: 'From Reports', color: '#6a1b9a' },
+                    { val: contributions.xpBreakdown.total,       label: 'Total XP',     color: '#ff6f00' },
+                  ].map(item => (
+                    <div key={item.label} className="pr-xp-item">
+                      <span className="pr-xp-val" style={{ color: item.color }}>{item.val}</span>
+                      <span className="pr-xp-label">{item.label}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             )}
-            <div style={s.card}>
-              <div style={s.cardTitle}>🗺️ Rank Roadmap</div>
-              <div style={s.rankRoad}>
+
+            <div className="pr-card">
+              <div className="pr-card-title">🗺️ Rank Roadmap</div>
+              <div className="pr-rank-road">
                 {RANK_ORDER.map((rank, i) => {
-                  const reached = (user?.xp || 0) >= rank.minXP;
+                  const reached  = (user?.xp || 0) >= rank.minXP;
+                  const isCurrent = rank.name === user?.rank;
                   return (
-                    <div key={rank.name} style={s.rankStep}>
-                      <div style={{
-                        ...s.rankDot,
-                        background: reached ? '#ff6f00' : '#e0e0e0',
-                        border: rank.name === user?.rank ? '3px solid #1a237e' : 'none',
-                      }} />
-                      <div style={s.rankInfo}>
-                        <span style={{ fontSize: 13, fontWeight: rank.name === user?.rank ? 'bold' : 'normal', color: reached ? '#1a237e' : '#aaa' }}>
+                    <div key={rank.name} className="pr-rank-step">
+                      <div
+                        className="pr-rank-dot"
+                        style={{
+                          background: reached ? '#ff6f00' : '#e0e0e0',
+                          boxShadow:  isCurrent ? '0 0 0 4px #ff6f0033' : 'none',
+                          border:     isCurrent ? '3px solid #fff' : 'none',
+                        }}
+                      />
+                      <div className="pr-rank-info">
+                        <span style={{ fontSize: 12, fontWeight: isCurrent ? '700' : '400', color: reached ? '#1a237e' : '#bbb' }}>
                           {rank.name}
                         </span>
-                        <span style={{ fontSize: 11, color: '#999' }}>{rank.minXP} XP</span>
+                        <span style={{ fontSize: 10, color: '#bbb' }}>{rank.minXP} XP</span>
                       </div>
                       {i < RANK_ORDER.length - 1 && (
-                        <div style={{ ...s.rankLine, background: reached ? '#ff6f00' : '#e0e0e0' }} />
+                        <div className="pr-rank-line" style={{ background: reached ? '#ff6f00' : '#e0e0e0' }} />
                       )}
                     </div>
                   );
@@ -199,161 +209,327 @@ export default function Profile() {
           </div>
         )}
 
+        {/* Posts */}
         {activeTab === 'posts' && (
           <div>
-            {!contributions?.posts?.length
-              ? <div style={s.empty}>
-                  <div style={{ fontSize: 48 }}>📭</div>
-                  <p>No posts yet. Share your first train story!</p>
-                  <button style={s.emptyBtn} onClick={() => navigate('/community')}>Go to Community</button>
+            {!contributions?.posts?.length ? (
+              <div className="pr-empty">
+                <span>📭</span>
+                <p>No posts yet</p>
+                <small>Share your first train story in the community!</small>
+                <button className="pr-empty-btn" onClick={() => navigate('/community')}>
+                  Go to Community
+                </button>
+              </div>
+            ) : contributions.posts.map(post => (
+              <div key={post._id} className="pr-post-card">
+                <div className="pr-post-top">
+                  <span className="pr-post-cat">{CATEGORY_ICONS[post.category]} {post.category}</span>
+                  <span className="pr-post-time">{timeAgo(post.createdAt)}</span>
                 </div>
-              : contributions.posts.map(post => (
-                  <div key={post._id} style={s.postCard}>
-                    <div style={s.postTop}>
-                      <span style={s.postCat}>{CATEGORY_ICONS[post.category]} {post.category}</span>
-                      <span style={s.postTime}>{timeAgo(post.createdAt)}</span>
-                    </div>
-                    <div style={s.postTitle}>{post.title}</div>
-                    <div style={s.postFooter}>
-                      👍 {post.upvotes?.length || 0} upvotes
-                      {post.trainNumber && <span style={s.trainTag}>🚂 {post.trainNumber}</span>}
-                    </div>
-                  </div>
-                ))
-            }
+                <div className="pr-post-title">{post.title}</div>
+                <div className="pr-post-footer">
+                  <span>👍 {post.upvotes?.length || 0}</span>
+                  <span>💬 {post.comments?.length || 0}</span>
+                  {post.trainNumber && (
+                    <span
+                      className="pr-train-tag"
+                      onClick={() => navigate(`/train/${post.trainNumber}`)}
+                    >
+                      🚂 {post.trainNumber}
+                    </span>
+                  )}
+                </div>
+              </div>
+            ))}
           </div>
         )}
 
+        {/* Badges */}
         {activeTab === 'badges' && (
           <div>
-            {!user?.badges?.length
-              ? <div style={s.empty}>
-                  <div style={{ fontSize: 48 }}>🏅</div>
-                  <p>No badges yet. Keep contributing to earn them!</p>
-                </div>
-              : <div style={s.badgeGrid}>
-                  {user.badges.map((badge, i) => (
-                    <div key={i} style={s.badgeCard}>
-                      <div style={s.badgeIcon}>🏅</div>
-                      <div style={s.badgeName}>{badge.name}</div>
-                      <div style={s.badgeDate}>{timeAgo(badge.awardedAt)}</div>
-                    </div>
-                  ))}
-                </div>
-            }
+            {!user?.badges?.length ? (
+              <div className="pr-empty">
+                <span>🏅</span>
+                <p>No badges yet</p>
+                <small>Keep contributing to earn your first badge!</small>
+              </div>
+            ) : (
+              <div className="pr-badge-grid">
+                {user.badges.map((badge, i) => (
+                  <div key={i} className="pr-badge-card">
+                    <div className="pr-badge-icon">🏅</div>
+                    <div className="pr-badge-name">{badge.name}</div>
+                    <div className="pr-badge-date">{timeAgo(badge.awardedAt)}</div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         )}
 
+        {/* Settings */}
         {activeTab === 'settings' && (
-          <div style={s.card}>
-            <div style={s.cardTitle}>⚙️ Edit Profile</div>
-            {error && <p style={s.errorMsg}>{error}</p>}
+          <div className="pr-card">
+            <div className="pr-card-title">⚙️ Profile Settings</div>
+            {error && <div className="pr-error">{error}</div>}
+
             {!editing ? (
               <div>
-                <div style={s.settingRow}>
-                  <span style={s.settingLabel}>Name</span>
-                  <span style={s.settingVal}>{user?.name}</span>
-                </div>
-                <div style={s.settingRow}>
-                  <span style={s.settingLabel}>Email</span>
-                  <span style={s.settingVal}>{user?.email}</span>
-                </div>
-                <div style={s.settingRow}>
-                  <span style={s.settingLabel}>Theme</span>
-                  <span style={s.settingVal}>{user?.theme || 'system'}</span>
-                </div>
-                <div style={s.settingRow}>
-                  <span style={s.settingLabel}>Member since</span>
-                  <span style={s.settingVal}>{new Date(user?.createdAt).toLocaleDateString()}</span>
-                </div>
-                <button style={s.editBtn} onClick={() => setEditing(true)}>Edit Profile</button>
+                {[
+                  { label: '👤 Name',         value: user?.name },
+                  { label: '📧 Email',        value: user?.email },
+                  { label: '🎨 Theme',        value: user?.theme || 'system' },
+                  { label: '📅 Member since', value: new Date(user?.createdAt).toLocaleDateString() },
+                ].map(item => (
+                  <div key={item.label} className="pr-setting-row">
+                    <span className="pr-setting-label">{item.label}</span>
+                    <span className="pr-setting-val">{item.value}</span>
+                  </div>
+                ))}
+                <button className="pr-edit-btn" onClick={() => setEditing(true)}>
+                  ✏️ Edit Profile
+                </button>
               </div>
             ) : (
               <form onSubmit={handleUpdate}>
-                <label style={s.label}>Name</label>
-                <input style={s.input} value={form.name}
-                  onChange={e => setForm({ ...form, name: e.target.value })} />
-                <label style={s.label}>Theme</label>
-                <select style={s.input} value={form.theme}
-                  onChange={e => setForm({ ...form, theme: e.target.value })}>
-                  <option value="system">System</option>
+                <label className="pr-label">Full Name</label>
+                <input
+                  className="pr-input"
+                  value={form.name}
+                  onChange={e => setForm({ ...form, name: e.target.value })}
+                />
+                <label className="pr-label">Theme</label>
+                <select
+                  className="pr-input"
+                  value={form.theme}
+                  onChange={e => setForm({ ...form, theme: e.target.value })}
+                >
+                  <option value="system">System Default</option>
                   <option value="light">Light</option>
                   <option value="dark">Dark</option>
                 </select>
-                <div style={{ display: 'flex', gap: 10, marginTop: 8 }}>
-                  <button style={s.editBtn} type="submit" disabled={saving}>
-                    {saving ? 'Saving...' : 'Save Changes'}
+                <div className="pr-btn-row">
+                  <button className="pr-edit-btn" type="submit" disabled={saving}>
+                    {saving ? '⏳ Saving...' : '💾 Save Changes'}
                   </button>
-                  <button style={s.cancelBtn} type="button" onClick={() => setEditing(false)}>
+                  <button className="pr-cancel-btn" type="button" onClick={() => setEditing(false)}>
                     Cancel
                   </button>
                 </div>
               </form>
             )}
+
+            <div className="pr-danger-zone">
+              <button className="pr-logout-btn" onClick={logout}>🚪 Logout</button>
+            </div>
           </div>
         )}
+
       </div>
+
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        .pr-page { min-height: 100vh; background: #f0f2f8; font-family: 'Inter', sans-serif; }
+
+        /* Navbar */
+        .pr-nav {
+          background: #0d1b5e; padding: 0 24px; height: 60px;
+          display: flex; align-items: center; justify-content: space-between;
+          position: sticky; top: 0; z-index: 100;
+          box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+        }
+        .pr-nav-logo { color: #fff; font-size: 20px; font-weight: 800; cursor: pointer; }
+        .pr-nav-links { display: flex; gap: 8px; align-items: center; }
+        .pr-nav-btn {
+          background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+          color: #fff; padding: 7px 14px; border-radius: 8px; cursor: pointer;
+          font-size: 13px; font-family: 'Inter', sans-serif; font-weight: 500;
+        }
+        .pr-nav-btn:hover { background: rgba(255,255,255,0.2); }
+        .pr-nav-logout {
+          background: #ff6f00; border: none; color: #fff; padding: 7px 14px;
+          border-radius: 8px; cursor: pointer; font-size: 13px;
+          font-family: 'Inter', sans-serif; font-weight: 600;
+        }
+
+        /* Hero */
+        .pr-hero {
+          background: linear-gradient(160deg, #0d1b5e 0%, #1a237e 60%, #283593 100%);
+          padding: 40px 24px 52px; text-align: center; position: relative; overflow: hidden;
+        }
+        .pr-hero::before {
+          content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+          height: 50px; background: #f0f2f8;
+          clip-path: ellipse(55% 100% at 50% 100%);
+        }
+        .pr-hero-inner { position: relative; z-index: 1; }
+        .pr-avatar {
+          width: 88px; height: 88px; border-radius: 50%;
+          background: linear-gradient(135deg, #ff6f00, #ff8f00);
+          margin: 0 auto 14px; display: flex; align-items: center; justify-content: center;
+          overflow: hidden; box-shadow: 0 4px 20px rgba(255,111,0,0.4);
+          border: 3px solid rgba(255,255,255,0.3);
+        }
+        .pr-avatar-img { width: 100%; height: 100%; object-fit: cover; }
+        .pr-avatar-letter { font-size: 38px; color: #fff; font-weight: 800; }
+        .pr-user-name { color: #fff; font-size: 26px; font-weight: 800; margin-bottom: 10px; letter-spacing: -0.5px; }
+        .pr-rank-badge {
+          display: inline-block; padding: 5px 16px; border-radius: 20px;
+          font-size: 13px; font-weight: 700; margin-bottom: 14px;
+        }
+        .pr-xp-row { display: flex; align-items: center; justify-content: center; gap: 14px; margin-bottom: 12px; }
+        .pr-xp-text { color: #ffd700; font-size: 17px; font-weight: 800; }
+        .pr-next-rank { color: #90caf9; font-size: 13px; }
+        .pr-progress-track {
+          height: 8px; background: rgba(255,255,255,0.2); border-radius: 10px;
+          max-width: 380px; margin: 0 auto 6px; overflow: hidden;
+        }
+        .pr-progress-fill {
+          height: 100%; background: linear-gradient(90deg, #ff6f00, #ffb300);
+          border-radius: 10px; transition: width 1s ease;
+        }
+        .pr-progress-label { color: rgba(255,255,255,0.5); font-size: 12px; }
+
+        /* Stats */
+        .pr-stats-row {
+          display: flex; background: #fff;
+          box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+        }
+        .pr-stat-block {
+          display: flex; flex-direction: column; align-items: center;
+          gap: 4px; flex: 1; padding: 16px 0;
+          border-right: 1px solid #f0f0f0;
+        }
+        .pr-stat-block:last-child { border-right: none; }
+        .pr-stat-val { font-size: 22px; font-weight: 800; color: #1a237e; }
+        .pr-stat-label { font-size: 11px; color: #999; text-transform: uppercase; letter-spacing: 0.5px; }
+
+        /* Body */
+        .pr-body { max-width: 700px; margin: 24px auto; padding: 0 16px 48px; }
+
+        /* Tabs */
+        .pr-tabs {
+          display: flex; background: #fff; border-radius: 12px;
+          margin-bottom: 20px; overflow: hidden;
+          box-shadow: 0 2px 12px rgba(0,0,0,0.06); padding: 4px;
+        }
+        .pr-tab {
+          flex: 1; padding: 10px 4px; background: transparent; border: none;
+          cursor: pointer; font-size: 12px; font-family: 'Inter', sans-serif;
+          font-weight: 500; color: #999; border-radius: 8px; transition: all 0.2s;
+        }
+        .pr-tab-active { background: #1a237e; color: #fff; font-weight: 700; }
+
+        /* Card */
+        .pr-card {
+          background: #fff; border-radius: 14px; padding: 20px;
+          margin-bottom: 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .pr-card-title { font-size: 15px; font-weight: 700; color: #1a237e; margin-bottom: 16px; }
+
+        /* XP grid */
+        .pr-xp-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+        .pr-xp-item {
+          display: flex; flex-direction: column; align-items: center; gap: 5px;
+          background: #f8f9ff; border-radius: 10px; padding: 14px 8px;
+        }
+        .pr-xp-val { font-size: 22px; font-weight: 800; }
+        .pr-xp-label { font-size: 11px; color: #999; text-align: center; font-weight: 500; }
+
+        /* Rank road */
+        .pr-rank-road { display: flex; align-items: center; overflow-x: auto; padding: 8px 0; gap: 0; }
+        .pr-rank-step { display: flex; align-items: center; flex-shrink: 0; }
+        .pr-rank-dot { width: 16px; height: 16px; border-radius: 50%; flex-shrink: 0; transition: all 0.3s; }
+        .pr-rank-info { display: flex; flex-direction: column; align-items: center; padding: 0 8px; }
+        .pr-rank-line { width: 28px; height: 3px; flex-shrink: 0; }
+
+        /* Post cards */
+        .pr-post-card {
+          background: #fff; border-radius: 12px; padding: 16px;
+          margin-bottom: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+          border-left: 3px solid #1a237e;
+        }
+        .pr-post-top { display: flex; justify-content: space-between; margin-bottom: 8px; }
+        .pr-post-cat {
+          font-size: 12px; color: #1565c0; background: #e3f2fd;
+          padding: 2px 10px; border-radius: 10px; font-weight: 600;
+        }
+        .pr-post-time { font-size: 12px; color: #bbb; }
+        .pr-post-title { font-size: 15px; font-weight: 700; color: #1a237e; margin-bottom: 10px; }
+        .pr-post-footer { display: flex; gap: 14px; font-size: 13px; color: #888; align-items: center; }
+        .pr-train-tag {
+          background: #e8eaf6; color: #1a237e; padding: 2px 10px;
+          border-radius: 10px; font-size: 12px; cursor: pointer; font-weight: 600;
+        }
+
+        /* Badges */
+        .pr-badge-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+        .pr-badge-card {
+          background: #fff; border-radius: 12px; padding: 20px;
+          text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+          transition: transform 0.15s;
+        }
+        .pr-badge-card:hover { transform: translateY(-2px); }
+        .pr-badge-icon { font-size: 36px; margin-bottom: 10px; }
+        .pr-badge-name { font-size: 13px; font-weight: 700; color: #1a237e; margin-bottom: 4px; }
+        .pr-badge-date { font-size: 11px; color: #bbb; }
+
+        /* Settings */
+        .pr-setting-row {
+          display: flex; justify-content: space-between; align-items: center;
+          padding: 13px 0; border-bottom: 1px solid #f5f5f5;
+        }
+        .pr-setting-label { font-size: 13px; color: #888; font-weight: 500; }
+        .pr-setting-val { font-size: 14px; font-weight: 600; color: #222; }
+        .pr-label { font-size: 12px; color: #666; display: block; margin: 14px 0 6px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+        .pr-input {
+          width: 100%; padding: 11px 14px; border: 1.5px solid #e0e0e0;
+          border-radius: 10px; font-size: 14px; font-family: 'Inter', sans-serif;
+          outline: none; transition: border-color 0.2s;
+        }
+        .pr-input:focus { border-color: #1a237e; }
+        .pr-btn-row { display: flex; gap: 10px; margin-top: 16px; }
+        .pr-edit-btn {
+          padding: 11px 24px; background: #1a237e; color: #fff; border: none;
+          border-radius: 10px; cursor: pointer; font-size: 14px; font-weight: 700;
+          font-family: 'Inter', sans-serif; transition: opacity 0.2s; margin-top: 16px;
+        }
+        .pr-edit-btn:disabled { opacity: 0.6; }
+        .pr-cancel-btn {
+          padding: 11px 24px; background: #f0f2f8; color: #555; border: none;
+          border-radius: 10px; cursor: pointer; font-size: 14px;
+          font-family: 'Inter', sans-serif; margin-top: 16px;
+        }
+        .pr-error {
+          background: #fff3f3; border: 1px solid #ffcdd2; color: #c62828;
+          padding: 10px 14px; border-radius: 8px; font-size: 13px; margin-bottom: 12px;
+        }
+        .pr-danger-zone { margin-top: 24px; padding-top: 16px; border-top: 1px solid #f0f0f0; }
+        .pr-logout-btn {
+          padding: 10px 20px; background: #fff3f3; color: #c62828; border: 1px solid #ffcdd2;
+          border-radius: 8px; cursor: pointer; font-size: 14px; font-weight: 600;
+          font-family: 'Inter', sans-serif;
+        }
+
+        /* Empty */
+        .pr-empty { text-align: center; padding: 56px 24px; }
+        .pr-empty span { font-size: 52px; display: block; margin-bottom: 14px; }
+        .pr-empty p { font-size: 17px; font-weight: 700; color: #333; margin-bottom: 6px; }
+        .pr-empty small { font-size: 13px; color: #999; display: block; margin-bottom: 20px; }
+        .pr-empty-btn {
+          padding: 10px 24px; background: #1a237e; color: #fff; border: none;
+          border-radius: 8px; cursor: pointer; font-size: 14px; font-weight: 600;
+          font-family: 'Inter', sans-serif;
+        }
+
+        @media (max-width: 480px) {
+          .pr-xp-grid { grid-template-columns: repeat(2, 1fr); }
+          .pr-badge-grid { grid-template-columns: repeat(2, 1fr); }
+          .pr-tab { font-size: 11px; padding: 8px 2px; }
+        }
+      `}</style>
     </div>
   );
 }
-
-const s = {
-  page:          { minHeight: '100vh', background: '#f5f7fa', fontFamily: 'sans-serif' },
-  navbar:        { background: '#1a237e', padding: '12px 24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' },
-  logo:          { color: '#fff', fontSize: 22, fontWeight: 'bold' },
-  navRight:      { display: 'flex', alignItems: 'center', gap: 16 },
-  navBtn:        { background: 'transparent', border: '1px solid rgba(255,255,255,0.5)', color: '#fff', padding: '6px 14px', borderRadius: 6, cursor: 'pointer', fontSize: 14 },
-  logoutBtn:     { background: '#ff6f00', border: 'none', color: '#fff', padding: '6px 14px', borderRadius: 6, cursor: 'pointer' },
-  hero:          { background: '#1a237e', padding: '40px 24px', textAlign: 'center' },
-  avatarCircle:  { width: 80, height: 80, borderRadius: '50%', background: '#ff6f00', margin: '0 auto 12px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' },
-  avatarImg:     { width: '100%', height: '100%', objectFit: 'cover' },
-  avatarLetter:  { fontSize: 36, color: '#fff', fontWeight: 'bold' },
-  userName:      { color: '#fff', fontSize: 26, margin: '0 0 8px', fontWeight: 'bold' },
-  rankBadge:     { padding: '5px 16px', borderRadius: 20, fontSize: 13, fontWeight: 'bold' },
-  xpRow:         { display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12, marginTop: 10 },
-  xpText:        { color: '#ffd700', fontSize: 16, fontWeight: 'bold' },
-  nextRank:      { color: '#90caf9', fontSize: 13 },
-  progressTrack: { height: 8, background: 'rgba(255,255,255,0.2)', borderRadius: 4, maxWidth: 400, margin: '12px auto 0', overflow: 'hidden' },
-  progressFill:  { height: '100%', background: '#ff6f00', borderRadius: 4, transition: 'width 1s ease' },
-  statsRow:      { display: 'flex', background: '#fff', padding: '16px 0', boxShadow: '0 2px 6px rgba(0,0,0,0.07)', justifyContent: 'center' },
-  stat:          { display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4, flex: 1 },
-  statVal:       { fontSize: 22, fontWeight: 'bold', color: '#1a237e' },
-  statLabel:     { fontSize: 11, color: '#999', textTransform: 'uppercase' },
-  statDivider:   { width: 1, background: '#eee' },
-  body:          { maxWidth: 700, margin: '24px auto', padding: '0 16px 40px' },
-  tabs:          { display: 'flex', background: '#fff', borderRadius: 10, marginBottom: 20, overflow: 'hidden', boxShadow: '0 2px 8px rgba(0,0,0,0.06)' },
-  tab:           { flex: 1, padding: '14px 0', background: 'none', border: 'none', cursor: 'pointer', fontSize: 13, transition: 'all 0.2s' },
-  card:          { background: '#fff', borderRadius: 12, padding: 20, marginBottom: 16, boxShadow: '0 2px 8px rgba(0,0,0,0.06)' },
-  cardTitle:     { fontSize: 16, fontWeight: 'bold', color: '#1a237e', marginBottom: 16 },
-  xpGrid:        { display: 'grid', gridTemplateColumns: '1fr 1fr 1fr 1fr', gap: 12 },
-  xpItem:        { display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4, background: '#f5f7fa', borderRadius: 8, padding: 12 },
-  xpVal:         { fontSize: 20, fontWeight: 'bold', color: '#1a237e' },
-  xpLabel:       { fontSize: 11, color: '#999', textAlign: 'center' },
-  rankRoad:      { display: 'flex', alignItems: 'center', overflowX: 'auto', padding: '8px 0' },
-  rankStep:      { display: 'flex', alignItems: 'center', flexShrink: 0 },
-  rankDot:       { width: 16, height: 16, borderRadius: '50%', flexShrink: 0 },
-  rankInfo:      { display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '0 8px' },
-  rankLine:      { width: 32, height: 3, flexShrink: 0 },
-  postCard:      { background: '#fff', borderRadius: 10, padding: 16, marginBottom: 12, boxShadow: '0 2px 6px rgba(0,0,0,0.06)' },
-  postTop:       { display: 'flex', justifyContent: 'space-between', marginBottom: 8 },
-  postCat:       { fontSize: 12, color: '#1565c0', background: '#e3f2fd', padding: '2px 10px', borderRadius: 10 },
-  postTime:      { fontSize: 12, color: '#999' },
-  postTitle:     { fontSize: 15, fontWeight: 'bold', color: '#1a237e', marginBottom: 8 },
-  postFooter:    { fontSize: 13, color: '#666', display: 'flex', alignItems: 'center', gap: 12 },
-  trainTag:      { background: '#e8eaf6', color: '#1a237e', padding: '2px 10px', borderRadius: 10, fontSize: 12 },
-  badgeGrid:     { display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 12 },
-  badgeCard:     { background: '#fff', borderRadius: 10, padding: 16, textAlign: 'center', boxShadow: '0 2px 6px rgba(0,0,0,0.06)' },
-  badgeIcon:     { fontSize: 36, marginBottom: 8 },
-  badgeName:     { fontSize: 13, fontWeight: 'bold', color: '#1a237e', marginBottom: 4 },
-  badgeDate:     { fontSize: 11, color: '#999' },
-  settingRow:    { display: 'flex', justifyContent: 'space-between', padding: '12px 0', borderBottom: '1px solid #f5f5f5' },
-  settingLabel:  { fontSize: 14, color: '#999' },
-  settingVal:    { fontSize: 14, fontWeight: '500', color: '#222' },
-  label:         { fontSize: 13, color: '#666', display: 'block', marginBottom: 6, marginTop: 12 },
-  input:         { width: '100%', padding: '10px 14px', border: '1px solid #e0e0e0', borderRadius: 8, fontSize: 14, boxSizing: 'border-box' },
-  editBtn:       { marginTop: 16, padding: '10px 24px', background: '#1a237e', color: '#fff', border: 'none', borderRadius: 8, cursor: 'pointer', fontSize: 14, fontWeight: 'bold' },
-  cancelBtn:     { marginTop: 16, padding: '10px 24px', background: '#f5f5f5', color: '#333', border: 'none', borderRadius: 8, cursor: 'pointer', fontSize: 14 },
-  errorMsg:      { color: 'red', fontSize: 13, marginBottom: 10 },
-  empty:         { textAlign: 'center', padding: '60px 0', color: '#999' },
-  emptyBtn:      { marginTop: 16, padding: '10px 24px', background: '#1a237e', color: '#fff', border: 'none', borderRadius: 8, cursor: 'pointer', fontSize: 14 },
-};

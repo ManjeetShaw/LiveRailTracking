@@ -24,21 +24,19 @@ const XP_MAP = {
 };
 
 export default function Community() {
-  const [posts, setPosts]         = useState([]);
-  const [loading, setLoading]     = useState(true);
-  const [category, setCategory]   = useState('all');
-  const [showForm, setShowForm]   = useState(false);
+  const [posts, setPosts]           = useState([]);
+  const [loading, setLoading]       = useState(true);
+  const [category, setCategory]     = useState('all');
+  const [showForm, setShowForm]     = useState(false);
   const [submitting, setSubmitting] = useState(false);
-  const [error, setError]         = useState('');
-  const [form, setForm]           = useState({
+  const [error, setError]           = useState('');
+  const [form, setForm]             = useState({
     title: '', body: '', category: 'forum', tags: '', trainNumber: ''
   });
   const { user } = useAuth();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    fetchPosts();
-  }, [category]);
+  useEffect(() => { fetchPosts(); }, [category]);
 
   const fetchPosts = async () => {
     setLoading(true);
@@ -83,208 +81,373 @@ export default function Community() {
   const timeAgo = (date) => {
     const diff = Date.now() - new Date(date);
     const mins = Math.floor(diff / 60000);
-    if (mins < 1)   return 'just now';
-    if (mins < 60)  return `${mins}m ago`;
+    if (mins < 1)  return 'just now';
+    if (mins < 60) return `${mins}m ago`;
     const hrs = Math.floor(mins / 60);
-    if (hrs < 24)   return `${hrs}h ago`;
+    if (hrs < 24)  return `${hrs}h ago`;
     return `${Math.floor(hrs / 24)}d ago`;
   };
 
   return (
-    <div style={s.page}>
+    <div className="cm-page">
 
       {/* Navbar */}
-      <div style={s.navbar}>
-        <span style={s.logo}>🚂 EkkWomm</span>
-        <div style={s.navRight}>
-          <button style={s.navBtn} onClick={() => navigate('/')}>🏠 Home</button>
-          <span style={s.navUser}>👤 {user?.name}</span>
+      <nav className="cm-nav">
+        <span className="cm-nav-logo" onClick={() => navigate('/')}>🚂 EkkWomm</span>
+        <div className="cm-nav-links">
+          <button className="cm-nav-btn" onClick={() => navigate('/')}>🏠 Home</button>
+          <button className="cm-nav-btn" onClick={() => navigate('/profile')}>👤 {user?.name?.split(' ')[0]}</button>
+        </div>
+      </nav>
+
+      {/* Hero */}
+      <div className="cm-hero">
+        <div className="cm-hero-inner">
+          <div className="cm-hero-icon">🚉</div>
+          <h1 className="cm-hero-title">Community</h1>
+          <p className="cm-hero-sub">Train sightings · Journey stories · Discussions · Encyclopedia</p>
+          <button className="cm-new-btn" onClick={() => setShowForm(!showForm)}>
+            {showForm ? '✕ Cancel' : '✏️ New Post'}
+          </button>
         </div>
       </div>
 
-      {/* Hero */}
-      <div style={s.hero}>
-        <h1 style={s.heroTitle}>Community</h1>
-        <p style={s.heroSub}>Train sightings, journey stories, discussions & more</p>
-        <button style={s.newPostBtn} onClick={() => setShowForm(!showForm)}>
-          {showForm ? '✕ Cancel' : '✏️ New Post'}
-        </button>
-      </div>
-
-      <div style={s.body}>
+      <div className="cm-body">
 
         {/* Create Post Form */}
         {showForm && (
-          <div style={s.formCard}>
-            <h3 style={s.formTitle}>Create a Post</h3>
-            {error && <p style={s.errorMsg}>{error}</p>}
+          <div className="cm-form-card">
+            <h3 className="cm-form-title">✏️ Create a Post</h3>
+            {error && <div className="cm-error">⚠️ {error}</div>}
+
             <form onSubmit={handleCreate}>
               {/* Category selector */}
-              <div style={s.categoryRow}>
+              <div className="cm-cat-row">
                 {['forum','sighting','journey-story','encyclopedia'].map(cat => (
-                  <button key={cat} type="button"
+                  <button
+                    key={cat} type="button"
+                    className="cm-cat-chip"
                     style={{
-                      ...s.catChip,
                       background: form.category === cat ? CATEGORY_COLORS[cat].bg : '#f5f5f5',
                       color:      form.category === cat ? CATEGORY_COLORS[cat].color : '#999',
-                      border:     form.category === cat ? `1px solid ${CATEGORY_COLORS[cat].color}` : '1px solid #eee',
+                      border:     form.category === cat ? `1.5px solid ${CATEGORY_COLORS[cat].color}` : '1.5px solid #eee',
+                      fontWeight: form.category === cat ? '700' : '500',
                     }}
-                    onClick={() => setForm({ ...form, category: cat })}>
+                    onClick={() => setForm({ ...form, category: cat })}
+                  >
                     {CATEGORY_ICONS[cat]} {cat}
                   </button>
                 ))}
               </div>
 
-              <div style={s.xpHint}>
-                🏆 You'll earn <strong>{XP_MAP[form.category]} XP</strong> for this post
+              <div className="cm-xp-hint">
+                🏆 You'll earn <strong>{XP_MAP[form.category]} XP</strong> for posting in this category
               </div>
 
-              <input style={s.input} placeholder="Title" required
-                value={form.title} onChange={e => setForm({ ...form, title: e.target.value })} />
-
-              <textarea style={s.textarea} placeholder="Write your post..." required rows={5}
-                value={form.body} onChange={e => setForm({ ...form, body: e.target.value })} />
-
-              <input style={s.input} placeholder="Train number (optional, e.g. 13009)"
-                value={form.trainNumber} onChange={e => setForm({ ...form, trainNumber: e.target.value })} />
-
-              <input style={s.input} placeholder="Tags (comma separated, e.g. delay, rajdhani, hwh)"
-                value={form.tags} onChange={e => setForm({ ...form, tags: e.target.value })} />
-
-              <button style={s.submitBtn} type="submit" disabled={submitting}>
-                {submitting ? 'Posting...' : '🚀 Post'}
+              <input
+                className="cm-input"
+                placeholder="Post title..."
+                required
+                value={form.title}
+                onChange={e => setForm({ ...form, title: e.target.value })}
+              />
+              <textarea
+                className="cm-textarea"
+                placeholder="Share your experience, sighting, or knowledge..."
+                required
+                rows={5}
+                value={form.body}
+                onChange={e => setForm({ ...form, body: e.target.value })}
+              />
+              <input
+                className="cm-input"
+                placeholder="🚂 Train number (optional, e.g. 12301)"
+                value={form.trainNumber}
+                onChange={e => setForm({ ...form, trainNumber: e.target.value })}
+              />
+              <input
+                className="cm-input"
+                placeholder="🏷️ Tags (comma separated, e.g. delay, rajdhani)"
+                value={form.tags}
+                onChange={e => setForm({ ...form, tags: e.target.value })}
+              />
+              <button className="cm-submit-btn" type="submit" disabled={submitting}>
+                {submitting ? '⏳ Posting...' : '🚀 Publish Post'}
               </button>
             </form>
           </div>
         )}
 
         {/* Category Filter */}
-        <div style={s.filterRow}>
+        <div className="cm-filter-row">
           {CATEGORIES.map(cat => (
-            <button key={cat} style={{
-              ...s.filterBtn,
-              background: category === cat ? '#1a237e' : '#fff',
-              color:      category === cat ? '#fff' : '#555',
-            }} onClick={() => setCategory(cat)}>
+            <button
+              key={cat}
+              className="cm-filter-btn"
+              style={{
+                background: category === cat ? '#1a237e' : '#fff',
+                color:      category === cat ? '#fff' : '#555',
+                borderColor: category === cat ? '#1a237e' : '#e0e0e0',
+              }}
+              onClick={() => setCategory(cat)}
+            >
               {cat === 'all' ? '🌐 All' : `${CATEGORY_ICONS[cat]} ${cat}`}
             </button>
           ))}
         </div>
 
-        {/* Posts */}
-        {loading && <p style={s.msg}>Loading posts...</p>}
-        {!loading && posts.length === 0 && (
-          <div style={s.empty}>
-            <div style={{ fontSize: 48 }}>📭</div>
-            <p>No posts yet. Be the first to post!</p>
+        {/* Loading */}
+        {loading && (
+          <div className="cm-loading">
+            <div className="cm-loading-icon">🚉</div>
+            <p>Loading posts...</p>
           </div>
         )}
 
-        {posts.map(post => (
-          <div key={post._id} style={s.postCard}>
+        {/* Empty */}
+        {!loading && posts.length === 0 && (
+          <div className="cm-empty">
+            <span>📭</span>
+            <p>No posts yet in this category.</p>
+            <small>Be the first to share!</small>
+          </div>
+        )}
 
-            {/* Post Header */}
-            <div style={s.postHeader}>
-              <div style={s.authorRow}>
-                <div style={s.avatar}>{post.author?.name?.[0]?.toUpperCase() || '?'}</div>
-                <div>
-                  <div style={s.authorName}>{post.author?.name || 'Unknown'}</div>
-                  <div style={s.authorRank}>{post.author?.rank || 'New Passenger'}</div>
+        {/* Posts */}
+        {posts.map(post => (
+          <div key={post._id} className="cm-post-card">
+
+            {/* Header */}
+            <div className="cm-post-header">
+              <div className="cm-author-row">
+                <div className="cm-avatar">
+                  {post.author?.name?.[0]?.toUpperCase() || '?'}
+                </div>
+                <div className="cm-author-info">
+                  <span className="cm-author-name">{post.author?.name || 'Unknown'}</span>
+                  <span className="cm-author-rank">{post.author?.rank || 'New Passenger'}</span>
                 </div>
               </div>
-              <div style={s.postMeta}>
-                <span style={{
-                  ...s.catBadge,
-                  background: CATEGORY_COLORS[post.category]?.bg || '#f5f5f5',
-                  color:      CATEGORY_COLORS[post.category]?.color || '#555',
-                }}>
+              <div className="cm-post-meta">
+                <span
+                  className="cm-cat-badge"
+                  style={{
+                    background: CATEGORY_COLORS[post.category]?.bg || '#f5f5f5',
+                    color:      CATEGORY_COLORS[post.category]?.color || '#555',
+                  }}
+                >
                   {CATEGORY_ICONS[post.category]} {post.category}
                 </span>
-                <span style={s.timeAgo}>{timeAgo(post.createdAt)}</span>
+                <span className="cm-time-ago">{timeAgo(post.createdAt)}</span>
               </div>
             </div>
 
-            {/* Post Body */}
-            <div style={s.postTitle}>{post.title}</div>
-            <div style={s.postBody}>
-              {post.body.length > 200 ? post.body.slice(0, 200) + '...' : post.body}
+            {/* Content */}
+            <div className="cm-post-title">{post.title}</div>
+            <div className="cm-post-body">
+              {post.body.length > 220 ? post.body.slice(0, 220) + '...' : post.body}
             </div>
 
             {/* Train tag */}
             {post.trainNumber && (
-              <div style={s.trainTag} onClick={() => navigate(`/train/${post.trainNumber}`)}>
+              <span
+                className="cm-train-tag"
+                onClick={() => navigate(`/train/${post.trainNumber}`)}
+              >
                 🚂 {post.trainNumber}
-              </div>
+              </span>
             )}
 
             {/* Tags */}
             {post.tags?.length > 0 && (
-              <div style={s.tagsRow}>
+              <div className="cm-tags-row">
                 {post.tags.map(tag => (
-                  <span key={tag} style={s.tag}>#{tag}</span>
+                  <span key={tag} className="cm-tag">#{tag}</span>
                 ))}
               </div>
             )}
 
-            {/* Post Footer */}
-            <div style={s.postFooter}>
-              <button style={s.footerBtn} onClick={() => handleUpvote(post._id)}>
+            {/* Footer */}
+            <div className="cm-post-footer">
+              <button className="cm-footer-btn cm-upvote-btn" onClick={() => handleUpvote(post._id)}>
                 👍 {post.upvotes?.length || 0}
               </button>
-              <span style={s.footerBtn}>💬 {post.comments?.length || 0}</span>
-              <span style={s.footerBtn}>👁️ {post.viewCount || 0}</span>
+              <span className="cm-footer-btn">💬 {post.comments?.length || 0}</span>
+              <span className="cm-footer-btn">👁️ {post.viewCount || 0}</span>
             </div>
 
           </div>
         ))}
 
       </div>
+
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        .cm-page { min-height: 100vh; background: #f0f2f8; font-family: 'Inter', sans-serif; }
+
+        /* Navbar */
+        .cm-nav {
+          background: #0d1b5e; padding: 0 24px; height: 60px;
+          display: flex; align-items: center; justify-content: space-between;
+          position: sticky; top: 0; z-index: 100;
+          box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+        }
+        .cm-nav-logo { color: #fff; font-size: 20px; font-weight: 800; cursor: pointer; }
+        .cm-nav-links { display: flex; gap: 8px; }
+        .cm-nav-btn {
+          background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+          color: #fff; padding: 7px 14px; border-radius: 8px; cursor: pointer;
+          font-size: 13px; font-family: 'Inter', sans-serif; font-weight: 500;
+        }
+        .cm-nav-btn:hover { background: rgba(255,255,255,0.2); }
+
+        /* Hero */
+        .cm-hero {
+          background: linear-gradient(160deg, #0d1b5e 0%, #1a237e 60%, #283593 100%);
+          padding: 48px 24px 52px; text-align: center; position: relative; overflow: hidden;
+        }
+        .cm-hero::before {
+          content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+          height: 50px; background: #f0f2f8;
+          clip-path: ellipse(55% 100% at 50% 100%);
+        }
+        .cm-hero-inner { position: relative; z-index: 1; }
+        .cm-hero-icon { font-size: 40px; margin-bottom: 12px; }
+        .cm-hero-title { color: #fff; font-size: 34px; font-weight: 800; margin-bottom: 8px; letter-spacing: -0.5px; }
+        .cm-hero-sub { color: #90caf9; font-size: 14px; margin-bottom: 24px; }
+        .cm-new-btn {
+          padding: 12px 28px; background: linear-gradient(135deg, #ff6f00, #ff8f00);
+          color: #fff; border: none; border-radius: 10px; font-size: 15px;
+          font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif;
+          box-shadow: 0 4px 16px rgba(255,111,0,0.4); transition: all 0.2s;
+        }
+        .cm-new-btn:hover { transform: translateY(-1px); }
+
+        /* Body */
+        .cm-body { max-width: 720px; margin: 28px auto; padding: 0 16px 48px; }
+
+        /* Form card */
+        .cm-form-card {
+          background: #fff; border-radius: 16px; padding: 24px;
+          margin-bottom: 20px; box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+          border-top: 4px solid #1a237e;
+        }
+        .cm-form-title { font-size: 17px; font-weight: 700; color: #1a237e; margin-bottom: 16px; }
+        .cm-error {
+          background: #fff3f3; border: 1px solid #ffcdd2; color: #c62828;
+          padding: 10px 14px; border-radius: 8px; font-size: 13px; margin-bottom: 14px;
+        }
+        .cm-cat-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+        .cm-cat-chip {
+          padding: 7px 14px; border-radius: 20px; font-size: 12px;
+          cursor: pointer; font-family: 'Inter', sans-serif; transition: all 0.2s;
+        }
+        .cm-xp-hint {
+          font-size: 13px; color: #666; background: #fffde7; border: 1px solid #fff176;
+          padding: 8px 14px; border-radius: 8px; margin-bottom: 14px;
+        }
+        .cm-input {
+          width: 100%; padding: 11px 14px; border: 1.5px solid #e0e0e0;
+          border-radius: 10px; font-size: 14px; margin-bottom: 10px;
+          font-family: 'Inter', sans-serif; outline: none; transition: border-color 0.2s;
+        }
+        .cm-input:focus { border-color: #1a237e; }
+        .cm-textarea {
+          width: 100%; padding: 11px 14px; border: 1.5px solid #e0e0e0;
+          border-radius: 10px; font-size: 14px; margin-bottom: 10px;
+          font-family: 'Inter', sans-serif; resize: vertical; outline: none;
+          transition: border-color 0.2s;
+        }
+        .cm-textarea:focus { border-color: #1a237e; }
+        .cm-submit-btn {
+          padding: 12px 28px; background: linear-gradient(135deg, #1a237e, #283593);
+          color: #fff; border: none; border-radius: 10px; font-size: 14px;
+          font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif;
+          transition: opacity 0.2s;
+        }
+        .cm-submit-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+        /* Filter */
+        .cm-filter-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+        .cm-filter-btn {
+          padding: 8px 16px; border-radius: 20px; border: 1.5px solid;
+          font-size: 13px; cursor: pointer; font-weight: 500;
+          font-family: 'Inter', sans-serif; transition: all 0.2s;
+        }
+
+        /* Loading */
+        .cm-loading { text-align: center; padding: 48px; color: #888; }
+        .cm-loading-icon { font-size: 48px; animation: bounce 0.8s infinite alternate; }
+        @keyframes bounce { from { transform: translateY(0); } to { transform: translateY(-8px); } }
+
+        /* Empty */
+        .cm-empty { text-align: center; padding: 56px 24px; color: #888; }
+        .cm-empty span { font-size: 48px; display: block; margin-bottom: 12px; }
+        .cm-empty p { font-size: 16px; color: #555; margin-bottom: 6px; }
+        .cm-empty small { font-size: 13px; }
+
+        /* Post card */
+        .cm-post-card {
+          background: #fff; border-radius: 14px; padding: 20px;
+          margin-bottom: 14px; box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+          transition: transform 0.15s, box-shadow 0.15s;
+        }
+        .cm-post-card:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0,0,0,0.09); }
+
+        .cm-post-header {
+          display: flex; justify-content: space-between;
+          align-items: flex-start; margin-bottom: 12px;
+        }
+        .cm-author-row { display: flex; align-items: center; gap: 10px; }
+        .cm-avatar {
+          width: 40px; height: 40px; border-radius: 50%; background: #1a237e;
+          color: #fff; display: flex; align-items: center; justify-content: center;
+          font-weight: 800; font-size: 16px; flex-shrink: 0;
+        }
+        .cm-author-info { display: flex; flex-direction: column; gap: 2px; }
+        .cm-author-name { font-size: 14px; font-weight: 700; color: #222; }
+        .cm-author-rank { font-size: 11px; color: #ff6f00; font-weight: 600; }
+        .cm-post-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 5px; }
+        .cm-cat-badge {
+          padding: 3px 10px; border-radius: 12px;
+          font-size: 11px; font-weight: 700;
+        }
+        .cm-time-ago { font-size: 11px; color: #bbb; }
+
+        .cm-post-title { font-size: 16px; font-weight: 700; color: #1a237e; margin-bottom: 8px; line-height: 1.3; }
+        .cm-post-body { font-size: 14px; color: #555; line-height: 1.6; margin-bottom: 12px; }
+
+        .cm-train-tag {
+          display: inline-block; background: #e8eaf6; color: #1a237e;
+          padding: 4px 12px; border-radius: 20px; font-size: 12px;
+          cursor: pointer; margin-bottom: 10px; font-weight: 600;
+          transition: background 0.2s;
+        }
+        .cm-train-tag:hover { background: #c5cae9; }
+
+        .cm-tags-row { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+        .cm-tag {
+          font-size: 12px; color: #888; background: #f5f5f5;
+          padding: 3px 8px; border-radius: 10px;
+        }
+
+        .cm-post-footer {
+          display: flex; gap: 6px; border-top: 1px solid #f5f5f5; padding-top: 12px;
+        }
+        .cm-footer-btn {
+          background: #f5f7ff; border: none; font-size: 13px; color: #666;
+          cursor: pointer; padding: 6px 14px; border-radius: 8px;
+          font-family: 'Inter', sans-serif; font-weight: 500; transition: background 0.2s;
+        }
+        .cm-upvote-btn:hover { background: #e8eaf6; color: #1a237e; }
+
+        @media (max-width: 480px) {
+          .cm-hero-title { font-size: 26px; }
+          .cm-post-header { flex-direction: column; gap: 10px; }
+          .cm-post-meta { flex-direction: row; align-items: center; }
+        }
+      `}</style>
     </div>
   );
 }
-
-const s = {
-  page:        { minHeight: '100vh', background: '#f5f7fa', fontFamily: 'sans-serif' },
-  navbar:      { background: '#1a237e', padding: '12px 24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' },
-  logo:        { color: '#fff', fontSize: 22, fontWeight: 'bold' },
-  navRight:    { display: 'flex', alignItems: 'center', gap: 16 },
-  navBtn:      { background: 'transparent', border: '1px solid rgba(255,255,255,0.5)', color: '#fff', padding: '6px 14px', borderRadius: 6, cursor: 'pointer', fontSize: 14 },
-  navUser:     { color: '#fff', fontSize: 14 },
-  hero:        { background: '#1a237e', padding: '40px 24px', textAlign: 'center' },
-  heroTitle:   { color: '#fff', fontSize: 32, margin: '0 0 8px', fontWeight: 'bold' },
-  heroSub:     { color: '#90caf9', fontSize: 15, margin: '0 0 24px' },
-  newPostBtn:  { padding: '12px 28px', background: '#ff6f00', color: '#fff', border: 'none', borderRadius: 8, fontSize: 15, cursor: 'pointer', fontWeight: 'bold' },
-  body:        { maxWidth: 700, margin: '24px auto', padding: '0 16px 40px' },
-
-  formCard:    { background: '#fff', borderRadius: 12, padding: 24, marginBottom: 20, boxShadow: '0 2px 12px rgba(0,0,0,0.08)' },
-  formTitle:   { fontSize: 18, fontWeight: 'bold', color: '#1a237e', marginBottom: 16 },
-  categoryRow: { display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 12 },
-  catChip:     { padding: '6px 14px', borderRadius: 20, fontSize: 13, cursor: 'pointer', fontWeight: '500' },
-  xpHint:      { fontSize: 13, color: '#666', background: '#fffde7', padding: '8px 12px', borderRadius: 8, marginBottom: 12 },
-  input:       { width: '100%', padding: '12px 14px', border: '1px solid #e0e0e0', borderRadius: 8, fontSize: 14, marginBottom: 10, boxSizing: 'border-box' },
-  textarea:    { width: '100%', padding: '12px 14px', border: '1px solid #e0e0e0', borderRadius: 8, fontSize: 14, marginBottom: 10, boxSizing: 'border-box', resize: 'vertical' },
-  submitBtn:   { padding: '12px 28px', background: '#1a237e', color: '#fff', border: 'none', borderRadius: 8, fontSize: 15, cursor: 'pointer', fontWeight: 'bold' },
-  errorMsg:    { color: 'red', fontSize: 13, marginBottom: 10 },
-
-  filterRow:   { display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 20 },
-  filterBtn:   { padding: '8px 16px', borderRadius: 20, border: '1px solid #e0e0e0', fontSize: 13, cursor: 'pointer', fontWeight: '500' },
-
-  postCard:    { background: '#fff', borderRadius: 12, padding: 20, marginBottom: 16, boxShadow: '0 2px 8px rgba(0,0,0,0.06)' },
-  postHeader:  { display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 12 },
-  authorRow:   { display: 'flex', alignItems: 'center', gap: 10 },
-  avatar:      { width: 40, height: 40, borderRadius: '50%', background: '#1a237e', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold', fontSize: 16 },
-  authorName:  { fontSize: 14, fontWeight: 'bold', color: '#222' },
-  authorRank:  { fontSize: 12, color: '#ff6f00' },
-  postMeta:    { display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 4 },
-  catBadge:    { padding: '3px 10px', borderRadius: 12, fontSize: 12, fontWeight: '600' },
-  timeAgo:     { fontSize: 12, color: '#999' },
-  postTitle:   { fontSize: 17, fontWeight: 'bold', color: '#1a237e', marginBottom: 8 },
-  postBody:    { fontSize: 14, color: '#555', lineHeight: 1.6, marginBottom: 10 },
-  trainTag:    { display: 'inline-block', background: '#e8eaf6', color: '#1a237e', padding: '4px 12px', borderRadius: 20, fontSize: 13, cursor: 'pointer', marginBottom: 8, fontWeight: '500' },
-  tagsRow:     { display: 'flex', gap: 6, flexWrap: 'wrap', marginBottom: 10 },
-  tag:         { fontSize: 12, color: '#666', background: '#f5f5f5', padding: '3px 8px', borderRadius: 10 },
-  postFooter:  { display: 'flex', gap: 16, borderTop: '1px solid #f0f0f0', paddingTop: 10, marginTop: 4 },
-  footerBtn:   { background: 'none', border: 'none', fontSize: 14, color: '#666', cursor: 'pointer', padding: '4px 8px', borderRadius: 6 },
-  msg:         { textAlign: 'center', color: '#666', padding: 40 },
-  empty:       { textAlign: 'center', color: '#999', padding: '60px 0', fontSize: 16 },
-};
